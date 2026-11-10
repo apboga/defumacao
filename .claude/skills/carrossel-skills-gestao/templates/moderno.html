@@ -269,7 +269,15 @@ function topico(s,a,i,n){return `<section class="slide ${s.tipo} ${s.estilo||''}
   </div>${footer(a,s)}</section>`}
 function render(c){const a=c.autor,n=c.slides.length;
   if(c.cores)for(const[k,v]of Object.entries(c.cores))document.documentElement.style.setProperty('--'+k,v);
-  document.getElementById('root').innerHTML=c.slides.map((s,i)=>(TIPOS[s.tipo]||topico)(s,a,i,n)).join('')}
+  document.getElementById('root').innerHTML=c.slides.map((s,i)=>(TIPOS[s.tipo]||topico)(s,a,i,n)).join('')
+  /* capa com foto que desce: o fundo acompanha a cor do topo da foto (sem faixa/emenda) */
+  document.querySelectorAll('section.capa img.foto').forEach(img=>{
+    const pinta=()=>{try{const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=12;
+      const g=c.getContext('2d');g.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,img.naturalWidth,img.naturalHeight);
+      const d=g.getImageData(0,0,c.width,12).data;let r=0,gg=0,b=0,k=0;for(let i=0;i<d.length;i+=4){r+=d[i];gg+=d[i+1];b+=d[i+2];k++}
+      img.closest('section').style.background=`rgb(${Math.round(r/k)},${Math.round(gg/k)},${Math.round(b/k)})`;img.dataset.ok=1}catch(e){img.dataset.ok=1}};
+    img.complete?pinta():img.addEventListener('load',pinta)});
+}
 (async()=>{if(window.CONTEUDO)return render(window.CONTEUDO);
   const q=new URLSearchParams(location.search).get('json');if(q)render(await(await fetch(q)).json())})();
 </script>

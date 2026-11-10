@@ -48,6 +48,7 @@ for (const s of conteudo.slides) {
   await page.addInitScript(c => { window.CONTEUDO = c; }, conteudo);
   await page.goto('file://' + template, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
+  await page.waitForFunction(() => [...document.images].every(i => i.complete) && [...document.querySelectorAll('section.capa img.foto')].every(i => i.dataset.ok));
   await page.waitForTimeout(300);
   const slides = await page.$$('section.slide');
   for (let i = 0; i < slides.length; i++) {
