@@ -84,6 +84,8 @@ Varie também a palavra do CTA, a cor do último slide (azul ou escuro) e a foto
 `templates/material-pdf.html` é o modelo do PDF entregue na DM (12 páginas 1080×1350, mesma identidade): capa, contexto, etapas, perguntas, leitura das respostas, erros, **quem sou** (bio, números, depoimento) e **oferta** (sinais + botão "Agendar primeira conversa").
 Copie para uma pasta com os assets, edite o HTML e gere com `node <skill>/scripts/pdf.js <pasta>` (espera `roteiro.html` na pasta; gera o PDF e um PNG por página).
 
+**Regra de CTA da venda (material e fechamentos):** o material entregue deve funcionar sozinho. Nunca insinue que ele não resolve sem a mentoria. Estrutura: "Use isto. Depois me conta." → convite para responder contando o resultado (abre conversa) → "E se quiser ir além, com alguém ao seu lado…" → o que a mentoria acrescenta (verbos positivos: preparar juntos, ler o contexto, fortalecer, desenhar) → botão "Conversar sobre o próximo passo · primeira conversa sem custo". No carrossel-diagnóstico, o CTA leva ao material ("Te envio o roteiro dessa conversa"), não direto à venda.
+
 ## Zona segura do Instagram (obrigatório antes de entregar)
 
 O Instagram sobrepõe elementos ao post 4:5 (1080×1350): contador "1/8" no canto superior direito, ícone de pessoas marcadas no inferior esquerdo, ícone de som no inferior direito, e a grade do perfil recorta a capa em 3:4 (~34 px de cada lateral).
