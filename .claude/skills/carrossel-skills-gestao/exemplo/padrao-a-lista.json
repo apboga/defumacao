@@ -1,0 +1,85 @@
+{
+  "template": "moderno",
+  "autor": {
+    "nome": "Alexandre Bogaciovas",
+    "subtitulo": "Mentor Estratégico Comportamental",
+    "avatar": "avatar-alexandre.jpg",
+    "logo": "logo-escuro.png",
+    "logo_claro": "logo-claro.png"
+  },
+  "slides": [
+    {
+      "tipo": "capa",
+      "foto": "capa-alexandre.jpg",
+      "foco": "center 15%",
+      "kicker": "Carreira · Liderança",
+      "titulo": "Seu esforço está<br>no <em>lugar errado.</em>"
+    },
+    {
+      "tipo": "topico",
+      "kicker": "<b>●</b> A dor",
+      "titulo": "Existe um desgaste que não vem do <em>excesso de trabalho.</em>",
+      "paragrafos": [
+        "Você entrega, resolve e assume o que nem sempre é seu. Mas, quando surgem as oportunidades, seu nome não aparece."
+      ],
+      "visual_html": "<div class='card' style='width:820px'><div class='cap'><span>Sua semana</span><span>5/5 concluído</span></div><div class='linha'>Fiquei até mais tarde<span class='pill'>✓ Feito</span></div><div class='linha'>Entreguei antes do prazo<span class='pill'>✓ Feito</span></div><div class='linha'>Cobri a falta de um colega<span class='pill'>✓ Feito</span></div><div class='linha'>Disse sim pra mais um projeto<span class='pill'>✓ Feito</span></div><div class='linha' style='font-weight:600'>Promoção do trimestre<span class='pill alert'>Outra pessoa</span></div></div>"
+    },
+    {
+      "tipo": "topico",
+      "kicker": "<b>●</b> A distinção",
+      "titulo": "Competente não é o mesmo que <em>considerado.</em>",
+      "paragrafos": [
+        "Aí você trabalha ainda mais pra provar algo que já demonstrou. Só que são três coisas diferentes, e elas nem sempre caminham juntas."
+      ],
+      "visual_html": "<div class='card' style='width:820px;padding:30px 34px 34px'><div class='cap'><span>Onde a carreira trava</span><span>Cenário típico</span></div><div class='barra'><div class='top'>Ser competente<span>90%</span></div><div class='trilho'><i style='width:90%'></i></div></div><div class='barra'><div class='top'>Ser percebido como competente<span>45%</span></div><div class='trilho'><i style='width:45%'></i></div></div><div class='barra ac'><div class='top'>Ser considerado para a oportunidade<span>15%</span></div><div class='trilho'><i style='width:15%'></i></div></div></div>"
+    },
+    {
+      "tipo": "topico",
+      "kicker": "<b>●</b> Técnica 1 de 3",
+      "numero": "01",
+      "titulo": "Pare de discutir esforço. <em>Negocie critérios.</em>",
+      "tw": 880,
+      "paragrafos": [
+        "Se ninguém consegue explicar os critérios, isso também é uma informação."
+      ],
+      "visual_html": "<div class='card' style='padding:26px 30px'><div class='cap'><span style='color:var(--alert)'>✕ Em vez de</span></div><div class='antes'>“Por que eu nunca sou lembrado nas promoções?”</div></div><div class='card dark' style='margin-top:14px;padding:28px 30px'><div class='cap'><span>✓ Pergunte</span><span>Base: busca de feedback</span></div><div class='depois'>“Considerando minhas entregas, o que precisaria acontecer pra eu ser considerado para uma posição maior?”</div></div><div class='grid2' style='margin-top:14px'><div class='mini'><b>01</b>Quais resultados são esperados?</div><div class='mini'><b>02</b>Que competências faltam?</div><div class='mini'><b>03</b>Quem participa da decisão?</div><div class='mini'><b>04</b>Quando revisamos?</div></div>"
+    },
+    {
+      "tipo": "topico",
+      "kicker": "<b>●</b> Técnica 2 de 3",
+      "numero": "02",
+      "titulo": "Transforme contribuição em <em>impacto percebido.</em>",
+      "paragrafos": [
+        "Uma entrega excelente pode ser invisível pra quem decide. Conte em três partes."
+      ],
+      "visual_html": "<div class='card' style='padding:22px 30px;margin-bottom:16px'><div class='cap'><span style='color:var(--alert)'>✕ Em vez de</span></div><div class='antes'>“Trabalhei intensamente na reestruturação da área.”</div></div><div class='fluxo'><div class='card'><h4>Problema</h4><p>30% de retrabalho nos pedidos</p></div><div class='seta'>→</div><div class='card'><h4>Intervenção</h4><p>Liderei o redesenho com 3 áreas</p></div><div class='seta'>→</div><div class='card blue'><h4>Impacto</h4><div class='big'>9 → 5</div><p>dias de prazo médio</p></div></div>"
+    },
+    {
+      "tipo": "topico",
+      "kicker": "<b>●</b> Técnica 3 de 3",
+      "numero": "03",
+      "titulo": "Descubra quem <em>influencia sua evolução.</em>",
+      "paragrafos": [
+        "Observe quem participa das decisões e quem conhece seu trabalho além do seu gestor."
+      ],
+      "visual_html": "<div class='grid2 vs'><div class='card'><div class='cap'><span>Mentor</span></div><h3>Fala <em>com</em> você</h3><ul><li>Aconselha</li><li>Ajuda a pensar o próximo passo</li><li>Presente quando você está</li></ul></div><div class='card dark'><div class='cap'><span>Patrocinador</span><span>Base: sponsorship</span></div><h3>Fala <em>de</em> você</h3><ul><li>Indica para projetos estratégicos</li><li>Defende seu nome nas decisões</li><li>Age quando você não está</li></ul></div></div>"
+    },
+    {
+      "tipo": "fechamento",
+      "estilo": "escuro",
+      "kicker": "<b>●</b> Reflexão",
+      "titulo": "Nem toda falta de reconhecimento se resolve <em>trabalhando mais.</em>",
+      "tw": 900,
+      "paragrafos": [
+        "Se você entrega, comunica resultados, conhece os critérios e constrói relações, mas continua sem oportunidades, o problema pode não estar <b>no que falta em você</b>, mas no que aquela organização está disposta a reconhecer."
+      ]
+    },
+    {
+      "tipo": "cta",
+      "estilo": "azul",
+      "kicker": "<b>●</b> Próximo passo",
+      "titulo": "Comenta <span class='chave'>roteiro</span> e receba as perguntas para a conversa com seu gestor.",
+      "acao": "Envio na DM"
+    }
+  ]
+}

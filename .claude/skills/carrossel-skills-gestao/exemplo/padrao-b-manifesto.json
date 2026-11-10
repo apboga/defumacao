@@ -1,0 +1,62 @@
+{
+  "template": "moderno",
+  "autor": {
+    "nome": "Alexandre Bogaciovas",
+    "subtitulo": "Mentor Estratégico Comportamental",
+    "avatar": "avatar-alexandre.jpg",
+    "logo": "logo-escuro.png",
+    "logo_claro": "logo-claro.png"
+  },
+  "slides": [
+    {
+      "tipo": "capa",
+      "variante": "tipografica",
+      "estilo": "azul",
+      "kicker": "Liderança · 5 verdades",
+      "titulo": "Liderar não é fazer mais. É <em>decidir melhor.</em>",
+      "swipe": "Deslize"
+    },
+    {
+      "tipo": "frase",
+      "estilo": "escuro",
+      "kicker": "● Verdade",
+      "numero": "01 / 05",
+      "titulo": "O líder que faz tudo ensina o time a <em>não fazer nada.</em>"
+    },
+    {
+      "tipo": "frase",
+      "kicker": "<b>●</b> Verdade",
+      "numero": "02 / 05",
+      "titulo": "Controle é o atalho de quem ainda não construiu <em>confiança.</em>",
+      "apoio": "Quanto mais você controla, menos o time decide. E menos ele cresce."
+    },
+    {
+      "tipo": "frase",
+      "estilo": "azul",
+      "kicker": "● Verdade",
+      "numero": "03 / 05",
+      "titulo": "Presença não vem do tom de voz. Vem da <em>consistência.</em>"
+    },
+    {
+      "tipo": "frase",
+      "kicker": "<b>●</b> Verdade",
+      "numero": "04 / 05",
+      "titulo": "Decisão adiada também é decisão. Só que <em>pior.</em>",
+      "apoio": "Em cenários ambíguos, quem reage menos e escolhe mais lidera melhor."
+    },
+    {
+      "tipo": "frase",
+      "estilo": "escuro",
+      "kicker": "● Verdade",
+      "numero": "05 / 05",
+      "titulo": "Nenhuma performance externa muda enquanto a <em>estrutura interna</em> continua igual."
+    },
+    {
+      "tipo": "autor",
+      "estilo": "azul",
+      "kicker": "● Próximo passo",
+      "bio": "Há 18 anos acompanho líderes em momentos de pressão, mudança e decisão. Mais de 600 já passaram por esse processo.",
+      "titulo": "Qual dessas verdades dói mais em você? <span class='chave'>Comenta o número.</span>"
+    }
+  ]
+}

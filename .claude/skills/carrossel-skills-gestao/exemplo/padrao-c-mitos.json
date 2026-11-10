@@ -1,0 +1,60 @@
+{
+  "template": "moderno",
+  "autor": {
+    "nome": "Alexandre Bogaciovas",
+    "subtitulo": "Mentor Estratégico Comportamental",
+    "avatar": "avatar-alexandre.jpg",
+    "logo": "logo-escuro.png",
+    "logo_claro": "logo-claro.png"
+  },
+  "slides": [
+    {
+      "tipo": "capa",
+      "variante": "split",
+      "foto": "foto-pb.jpg",
+      "foco": "70% 20%",
+      "pb": true,
+      "kicker": "Carreira executiva",
+      "titulo": "4 mitos que estão <em>travando sua promoção.</em>"
+    },
+    {
+      "tipo": "mito",
+      "kicker": "<b>●</b> Mito × prática",
+      "numero": "01",
+      "mito": "Quem entrega mais é promovido primeiro.",
+      "verdade": "Promovido é quem é <em>lembrado</em> por quem decide.",
+      "apoio": "Entrega sustenta sua posição. Visibilidade amplia suas opções."
+    },
+    {
+      "tipo": "mito",
+      "kicker": "<b>●</b> Mito × prática",
+      "numero": "02",
+      "mito": "Pedir feedback mostra insegurança.",
+      "verdade": "Pedir critério mostra <em>maturidade.</em>",
+      "apoio": "Quem pergunta o que precisa acontecer sai da torcida e entra na negociação."
+    },
+    {
+      "tipo": "mito",
+      "kicker": "<b>●</b> Mito × prática",
+      "numero": "03",
+      "mito": "Meu trabalho fala por mim.",
+      "verdade": "Seu trabalho só fala se alguém <em>conta a história.</em>",
+      "apoio": "Problema, intervenção e impacto. Nessa ordem."
+    },
+    {
+      "tipo": "mito",
+      "kicker": "<b>●</b> Mito × prática",
+      "numero": "04",
+      "mito": "Ter um bom mentor é suficiente.",
+      "verdade": "Mentor fala com você. Patrocinador <em>fala de você.</em>",
+      "apoio": "Na sala de decisão, quem defende seu nome pesa mais do que quem te aconselha."
+    },
+    {
+      "tipo": "cta",
+      "estilo": "azul",
+      "kicker": "● Próximo passo",
+      "titulo": "Qual mito você ainda segue? Comenta <span class='chave'>o número.</span>",
+      "acao": "Respondo nos comentários"
+    }
+  ]
+}

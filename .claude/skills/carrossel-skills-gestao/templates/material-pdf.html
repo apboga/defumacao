@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>O Roteiro da Conversa de Carreira — Alexandre Bogaciovas</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=block" rel="stylesheet">
+<style>
+@page{size:1080px 1350px;margin:0}
+:root{--bg:#F4F4F1;--card:#fff;--ink:#0E0F12;--body:#55585F;--muted:#8E9198;--line:#E2E2DD;--dark:#0F1115;--accent:#3355FF;--accent-soft:#E3E8FF;--alert:#FF5A36;--ok:#14A06B;--warn:#E8A317;--pad:96px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Geist,sans-serif;-webkit-font-smoothing:antialiased;color:var(--ink);background:#555}
+.p{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--bg);page-break-after:always;break-after:page}
+.p.escuro{background:var(--dark);color:#fff}.p.azul{background:var(--accent);color:#fff}
+.p::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(0,0,0,.035) 1px,transparent 1px);background-size:148px 100%;background-position:96px 0;-webkit-mask:linear-gradient(transparent,#000 12%,#000 88%,transparent)}
+.p.escuro::after,.p.azul::after{background-image:linear-gradient(to right,rgba(255,255,255,.05) 1px,transparent 1px)}
+.in{position:absolute;left:var(--pad);right:var(--pad);top:150px;bottom:150px;z-index:2;display:flex;flex-direction:column}
+.head{position:absolute;left:var(--pad);right:var(--pad);top:72px;display:flex;justify-content:space-between;align-items:center;font:500 16px/1 'Geist Mono';letter-spacing:.06em;text-transform:uppercase;color:var(--muted);z-index:3}
+.head b{color:var(--accent);font-weight:600}
+.escuro .head,.azul .head{color:rgba(255,255,255,.6)}.escuro .head b,.azul .head b{color:#fff}
+.foot{position:absolute;left:var(--pad);right:var(--pad);bottom:64px;display:flex;justify-content:space-between;align-items:center;font:500 15px/1 'Geist Mono';letter-spacing:.06em;text-transform:uppercase;color:var(--muted);z-index:3}
+.foot img{height:36px}
+.escuro .foot,.azul .foot{color:rgba(255,255,255,.55)}
+.mono{font-family:'Geist Mono'}
+.tag{font:600 17px/1 'Geist Mono';letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;display:flex;align-items:center;gap:12px}
+.tag span{display:grid;place-items:center;min-width:52px;height:52px;padding:0 12px;border-radius:14px;background:var(--accent);color:#fff;font:700 24px/1 Geist;letter-spacing:0}
+.escuro .tag{color:#8FA3FF}
+h1{font:700 76px/1 Geist;letter-spacing:-.045em}
+h2{font:700 62px/1.02 Geist;letter-spacing:-.04em}
+h1 em,h2 em{font-style:normal;color:var(--accent)}
+.escuro h1 em,.escuro h2 em{color:#8FA3FF}
+.lead{font:400 28px/1.42 Geist;color:var(--body);letter-spacing:-.01em;margin-top:26px;max-width:860px}
+.escuro .lead{color:rgba(255,255,255,.72)}
+.lead b{color:var(--ink);font-weight:600}.escuro .lead b{color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px 30px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 20px 40px -30px rgba(0,0,0,.25)}
+.card.dark{background:var(--dark);border-color:var(--dark);color:#fff}.card.blue{background:var(--accent);border-color:var(--accent);color:#fff}
+.card.soft{background:var(--accent-soft);border-color:#D3DBFF;box-shadow:none}
+.cap{font:500 15px/1 'Geist Mono';letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;justify-content:space-between}
+.card.dark .cap,.card.blue .cap{color:rgba(255,255,255,.6)}.card.soft .cap{color:var(--accent)}
+.fala{font:600 30px/1.3 Geist;letter-spacing:-.02em}
+.stack>*+*{margin-top:16px}
+.q{display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-top:1px solid var(--line)}
+.q:first-child{border-top:0;padding-top:4px}
+.q b{font:600 18px/1.6 'Geist Mono';color:var(--accent);flex:none}
+.q div{font:600 27px/1.28 Geist;letter-spacing:-.015em}
+.q small{display:block;font:400 21px/1.4 Geist;color:var(--body);margin-top:8px;letter-spacing:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mini h4{font:600 15px/1 'Geist Mono';letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.mini p{font:500 22px/1.32 Geist;letter-spacing:-.01em}
+.check{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line);font:500 24px/1.32 Geist}
+.check:first-of-type{border-top:0}
+.check i{flex:none;width:30px;height:30px;border:2px solid var(--accent);border-radius:9px;margin-top:1px}
+.sinal{display:flex;gap:22px;align-items:flex-start}
+.sinal .dot{flex:none;width:22px;height:22px;border-radius:50%;margin-top:8px}
+.sinal h3{font:700 30px/1.1 Geist;letter-spacing:-.02em}
+.sinal p{font:400 22px/1.4 Geist;color:var(--body);margin-top:8px}
+.sinal p b{color:var(--ink);font-weight:600}
+.x{display:flex;gap:16px;padding:17px 0;border-top:1px solid var(--line);align-items:flex-start}
+.x:first-child{border-top:0}
+.x span{flex:none;font:700 22px/1.3 Geist;color:var(--alert)}
+.x div{font:600 25px/1.3 Geist;letter-spacing:-.01em}.x small{display:block;font:400 21px/1.4 Geist;color:var(--body);margin-top:6px}
+.num{font:700 72px/1 Geist;letter-spacing:-.05em}
+.num small{display:block;font:500 15px/1.2 'Geist Mono';letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.escuro .num small{color:rgba(255,255,255,.55)}
+.pill{display:inline-block;font:600 15px/1 'Geist Mono';letter-spacing:.04em;text-transform:uppercase;padding:9px 13px;border-radius:30px;background:var(--accent-soft);color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:18px;background:#fff;color:var(--ink);border-radius:60px;padding:24px 34px;font:600 28px/1 Geist;text-decoration:none}
+.btn i{font-style:normal;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center}
+/* capa */
+.capa{background:var(--dark);color:#fff}
+.capa .foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.capa .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,17,21,.6) 0%,rgba(15,17,21,0) 22%,rgba(15,17,21,0) 34%,rgba(15,17,21,.88) 58%,#0F1115 78%)}
+.capa .chip{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:40px;padding:12px 20px;font:500 18px/1 Geist}
+.capa .chip i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(51,85,255,.3)}
+.capa h1{font-size:100px;line-height:.98}
+.capa h1 em{color:#fff;background:var(--accent);border-radius:14px;padding:0 .12em .04em;display:inline-block;margin-top:14px}
+</style>
+</head>
+<body>
+
+<!-- 1 · CAPA -->
+<section class="p capa">
+  <img class="foto" src="capa-alexandre.jpg"><div class="shade"></div>
+  <div class="head" style="top:150px"><span class="chip"><i></i>Material exclusivo</span><img src="logo-claro.png" style="height:56px"></div>
+  <div style="position:absolute;left:96px;right:96px;bottom:150px;z-index:3">
+    <div class="tag" style="color:#8FA3FF">Roteiro · Carreira e liderança</div>
+    <h1>O roteiro da conversa<br>que <em>muda o jogo.</em></h1>
+    <p class="lead" style="color:rgba(255,255,255,.75);margin-top:30px">As perguntas certas para transformar esforço em critério, e critério em oportunidade, na próxima conversa com seu gestor.</p>
+    <div style="margin-top:36px;display:flex;justify-content:space-between;align-items:center;font:500 18px/1 'Geist Mono';letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.6)"><span>Alexandre Bogaciovas</span><span>Mentor Estratégico Comportamental</span></div>
+  </div>
+</section>
+
+<!-- 2 · POR QUE -->
+<section class="p">
+  <div class="head"><span><b>●</b> Antes de começar</span><span>02 / 12</span></div>
+  <div class="in" style="justify-content:center">
+    <h2>Você não precisa trabalhar mais. Precisa <em>conversar melhor.</em></h2>
+    <p class="lead">A maioria das carreiras não trava por falta de competência. Trava porque três coisas diferentes são tratadas como se fossem uma só:</p>
+    <div class="card" style="margin-top:36px;padding:30px 34px 34px">
+      <div class="cap"><span>Onde a carreira trava</span><span>Cenário típico</span></div>
+      <div style="margin-top:6px"><div style="display:flex;justify-content:space-between;font:600 25px/1 Geist;margin-bottom:12px">Ser competente<span class="mono" style="font-size:20px;color:var(--muted)">Você entrega</span></div><div style="height:18px;border-radius:18px;background:#ECECE8"><i style="display:block;width:90%;height:100%;border-radius:18px;background:var(--ink)"></i></div></div>
+      <div style="margin-top:22px"><div style="display:flex;justify-content:space-between;font:600 25px/1 Geist;margin-bottom:12px">Ser percebido como competente<span class="mono" style="font-size:20px;color:var(--muted)">Os outros veem</span></div><div style="height:18px;border-radius:18px;background:#ECECE8"><i style="display:block;width:45%;height:100%;border-radius:18px;background:var(--ink)"></i></div></div>
+      <div style="margin-top:22px"><div style="display:flex;justify-content:space-between;font:600 25px/1 Geist;margin-bottom:12px">Ser considerado para a oportunidade<span class="mono" style="font-size:20px;color:var(--muted)">Quem decide lembra</span></div><div style="height:18px;border-radius:18px;background:#ECECE8"><i style="display:block;width:15%;height:100%;border-radius:18px;background:var(--accent)"></i></div></div>
+    </div>
+    <p class="lead" style="margin-top:34px">Este roteiro conecta as três. Ele tem <b>4 etapas</b>: preparação, abertura, as perguntas e o combinado final. Use na ordem.</p>
+  </div>
+  <div class="foot"><span>O roteiro da conversa de carreira</span><img src="logo-escuro.png"></div>
+</section>
+
+<!-- 3 · PREPARAÇÃO -->
+<section class="p">
+  <div class="head"><span><b>●</b> Etapa 1 · Preparação</span><span>03 / 12</span></div>
+  <div class="in" style="justify-content:center">
+    <div class="tag"><span>01</span>Antes da conversa</div>
+    <h2>Chegue com <em>fatos</em>, não com frustração.</h2>
+    <p class="lead">Separe 30 minutos e responda por escrito. Isso muda o tom da conversa inteira.</p>
+    <div class="card" style="margin-top:34px">
+      <div class="check"><i></i><div><b>3 entregas no formato P·I·I.</b> Problema, Intervenção, Impacto. Com números sempre que possível.</div></div>
+      <div class="check"><i></i><div><b>O que você quer, em uma frase.</b> Cargo, escopo, projeto ou remuneração. Seja específico.</div></div>
+      <div class="check"><i></i><div><b>O momento certo.</b> Uma reunião agendada para isso. Nunca no corredor, nunca depois de um problema.</div></div>
+      <div class="check"><i></i><div><b>O seu estado.</b> Se ainda está com raiva, adie. Conversa de carreira no calor vira desabafo.</div></div>
+    </div>
+    <div class="card soft" style="margin-top:16px;padding:22px 28px"><div class="cap" style="margin-bottom:10px"><span>Exemplo de P·I·I</span></div><div style="font:500 22px/1.4 Geist"><b>P:</b> 30% de retrabalho nos pedidos. <b>I:</b> liderei o redesenho do fluxo com 3 áreas. <b>I:</b> prazo médio caiu de 9 para 5 dias.</div></div>
+  </div>
+  <div class="foot"><span>O roteiro da conversa de carreira</span><img src="logo-escuro.png"></div>
+</section>
+
+<!-- 4 · ABERTURA -->
+<section class="p">
+  <div class="head"><span><b>●</b> Etapa 2 · Abertura</span><span>04 / 12</span></div>
+  <div class="in" style="justify-content:center">
+    <div class="tag"><span>02</span>Os primeiros 2 minutos</div>
+    <h2>A abertura define se é <em>conversa</em> ou cobrança.</h2>
+    <div class="card" style="margin-top:36px;padding:22px 30px"><div class="cap"><span style="color:var(--alert)">✕ Evite abrir assim</span></div><div style="font:500 26px/1.35 Geist;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--alert);text-decoration-thickness:3px">“Preciso falar com você porque não estou sendo valorizado aqui.”</div></div>
+    <div class="card dark" style="margin-top:16px;padding:30px 32px"><div class="cap"><span>✓ Abra assim</span><span>Copie e adapte</span></div><div class="fala">“Quero usar esse tempo para entender como posso crescer aqui. Tenho clareza do que entreguei até agora e quero alinhar com você o que precisa acontecer para o próximo passo.”</div></div>
+    <p class="lead" style="margin-top:30px">Repare: você não pede reconhecimento. Você pede <b>clareza</b>. Isso coloca seu gestor no papel de parceiro, não de réu.</p>
+  </div>
+  <div class="foot"><span>O roteiro da conversa de carreira</span><img src="logo-escuro.png"></div>
+</section>
+
+<!-- 5 · BLOCO CRITÉRIOS -->
+<section class="p">
+  <div class="head"><span><b>●</b> Etapa 3 · Perguntas</span><span>05 / 12</span></div>
+  <div class="in" style="justify-content:center">
+    <div class="tag"><span>A</span>Bloco critérios</div>
+    <h2>Transforme expectativa em <em>critério.</em></h2>
+    <div class="card" style="margin-top:34px">
+      <div class="q"><b>01</b><div>“Considerando minhas entregas atuais, o que precisaria acontecer para eu ser considerado para uma posição de maior responsabilidade?”<small>A pergunta principal. Faça e espere. Não complete o silêncio.</small></div></div>
+      <div class="q"><b>02</b><div>“Quais resultados concretos são esperados de quem está nessa posição?”<small>Busque números, prazos e exemplos.</small></div></div>
+      <div class="q"><b>03</b><div>“Que competências eu ainda preciso demonstrar?”<small>Peça um exemplo de situação em que isso faltou.</small></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>O roteiro da conversa de carreira</span><img src="logo-escuro.png"></div>
+</section>
+
+<!-- 6 · BLOCO PERCEPÇÃO -->
+<section class="p">
+  <div class="head"><span><b>●</b> Etapa 3 · Perguntas</span><span>06 / 12</span></div>
+  <div class="in" style="justify-content:center">
+    <div class="tag"><span>B</span>Bloco percepção</div>
+    <h2>Descubra como seu trabalho é <em>visto.</em></h2>
+    <div class="card" style="margin-top:34px">
+      <div class="q"><b>04</b><div>“Das minhas entregas recentes, qual você acha que teve mais impacto para a área?”<small>Mostra o que seu gestor valoriza, e se ele sabe o que você fez.</small></div></div>
+      <div class="q"><b>05</b><div>“Como meu trabalho é percebido por quem está acima de você?”<small>Competência que não chega a quem decide não vira oportunidade.</small></div></div>
+      <div class="q"><b>06</b><div>“O que eu poderia tornar mais visível, e para quem?”<small>Saia com um nome, um fórum ou uma reunião concreta.</small></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>O roteiro da conversa de carreira</span><img src="logo-escuro.png"></div>
+</section>
+
+<!-- 7 · BLOCO DECISÃO -->
+<section class="p">
+  <div class="head"><span><b>●</b> Etapa 3 · Perguntas</span><span>07 / 12</span></div>
+  <div class="in" style="justify-content:center">
+    <div class="tag"><span>C</span>Bloco decisão</div>
+    <h2>Entenda quem <em>decide</em>, e quem defende.</h2>
+    <div class="card" style="margin-top:34px">
+      <div class="q"><b>07</b><div>“Quem participa da decisão sobre promoções e novos projetos?”<small>Raramente é só o gestor direto.</small></div></div>
+      <div class="q"><b>08</b><div>“Quando surgir uma oportunidade, posso contar com você para apresentar meu nome?”<small>A pergunta que transforma gestor em patrocinador.</small></div></div>
+      <div class="q"><b>09</b><div>“Com quem eu deveria ampliar contato nos próximos meses?”<small>Mentor fala com você. Patrocinador fala de você.</small></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>O roteiro da conversa de carreira</span><img src="logo-escuro.png"></div>
+</section>
+
+<!-- 8 · COMBINADO -->
+<section class="p">
+  <div class="head"><span><b>●</b> Etapa 4 · Combinado</span><span>08 / 12</span></div>
+  <div class="in" style="justify-content:center">
+    <div class="tag"><span>04</span>Feche com data</div>
+    <h2>Conversa sem combinado é só <em>desabafo.</em></h2>
+    <div class="card dark" style="margin-top:34px;padding:28px 32px"><div class="cap"><span>✓ Para fechar</span></div><div class="fala">“Podemos revisar minha evolução nesses pontos daqui a 60 dias?”</div></div>
+    <div class="card" style="margin-top:16px"><div class="cap"><span>Mensagem de registro · envie no mesmo dia</span></div>
+      <div style="font:400 23px/1.5 Geist;color:var(--ink)">Obrigado pela conversa de hoje. Para eu me organizar, registro o que alinhamos:<br>
+      <b>1.</b> Resultados esperados: ____<br><b>2.</b> Competências a demonstrar: ____<br><b>3.</b> Próxima revisão: __/__.<br>Se algo ficou diferente do que você entendeu, me avisa.</div></div>
+    <p class="lead" style="margin-top:26px">O registro transforma uma conversa em <b>compromisso</b>, e protege você se o gestor mudar.</p>
+  </div>
+  <div class="foot"><span>O roteiro da conversa de carreira</span><img src="logo-escuro.png"></div>
+</section>
+
+<!-- 9 · LEITURA DAS RESPOSTAS -->
+<section class="p">
+  <div class="head"><span><b>●</b> Depois da conversa</span><span>09 / 12</span></div>
+  <div class="in" style="justify-content:center">
+    <h2>Como ler as <em>respostas.</em></h2>
+    <p class="lead">O que seu gestor responde diz muito. O que ele não consegue responder diz ainda mais.</p>
+    <div class="card" style="margin-top:34px;padding:30px 32px" >
+      <div class="sinal"><span class="dot" style="background:var(--ok)"></span><div><h3>Critérios claros e prazo</h3><p><b>Ambiente favorável.</b> Execute, registre o progresso e volte na data combinada.</p></div></div>
+      <div class="sinal" style="margin-top:26px;padding-top:26px;border-top:1px solid var(--line)"><span class="dot" style="background:var(--warn)"></span><div><h3>“Continue assim, uma hora vem”</h3><p><b>Critério vago.</b> Peça um exemplo concreto e proponha você mesmo os critérios para ele validar.</p></div></div>
+      <div class="sinal" style="margin-top:26px;padding-top:26px;border-top:1px solid var(--line)"><span class="dot" style="background:var(--alert)"></span><div><h3>Ninguém consegue explicar</h3><p><b>Informação importante.</b> O problema pode não estar no que falta em você, mas no que a organização está disposta a reconhecer.</p></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>O roteiro da conversa de carreira</span><img src="logo-escuro.png"></div>
+</section>
+
+<!-- 10 · ERROS -->
+<section class="p">
+  <div class="head"><span><b>●</b> Atenção</span><span>10 / 12</span></div>
+  <div class="in" style="justify-content:center">
+    <h2>5 erros que <em>sabotam</em> a conversa.</h2>
+    <div class="card" style="margin-top:34px">
+      <div class="x"><span>✕</span><div>Listar esforço em vez de impacto<small>“Fiquei até tarde” não é critério. “O prazo caiu pela metade” é.</small></div></div>
+      <div class="x"><span>✕</span><div>Comparar-se com colegas<small>Tira o foco de você e coloca o gestor na defensiva.</small></div></div>
+      <div class="x"><span>✕</span><div>Dar ultimato na primeira conversa<small>Ameaça fecha portas que a clareza abriria.</small></div></div>
+      <div class="x"><span>✕</span><div>Aceitar resposta vaga e ir embora<small>Sem critério e sem data, nada muda.</small></div></div>
+      <div class="x"><span>✕</span><div>Não registrar o combinado<small>O que não é escrito é esquecido, ou reinterpretado.</small></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>O roteiro da conversa de carreira</span><img src="logo-escuro.png"></div>
+</section>
+
+<!-- 11 · QUEM SOU -->
+<section class="p escuro">
+  <div class="head"><span><b>●</b> Quem preparou este material</span><span>11 / 12</span></div>
+  <div class="in" style="justify-content:center">
+    <div style="display:flex;gap:34px;align-items:center">
+      <img src="avatar-alexandre.jpg" style="width:150px;height:150px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.15)">
+      <div><div class="tag" style="margin-bottom:12px">Mentor Estratégico Comportamental</div><h2 style="font-size:58px">Alexandre Bogaciovas</h2></div>
+    </div>
+    <p class="lead" style="margin-top:34px">Há 18 anos acompanho empresários, executivos e líderes em momentos de crescimento, pressão e decisão. Minha tese é simples: <b>o que separa quem alcança de quem trava raramente é capacidade. É comportamento.</b></p>
+    <div class="grid3" style="margin-top:38px">
+      <div class="card" style="background:#1A1D23;border-color:#262A32;box-shadow:none"><div class="num" style="color:#fff">18<small>anos de atuação</small></div></div>
+      <div class="card" style="background:#1A1D23;border-color:#262A32;box-shadow:none"><div class="num" style="color:#fff">600+<small>líderes atendidos</small></div></div>
+      <div class="card" style="background:#1A1D23;border-color:#262A32;box-shadow:none"><div class="num" style="color:#fff">1:1<small>atendimento individual</small></div></div>
+    </div>
+    <p class="mono" style="margin-top:30px;font:500 16px/1.6 'Geist Mono';letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55)">Mestrado em Liderança Organizacional · Wharton · Case Western · PUC · ICI<br>Sócio-diretor da Inove Soluções em Liderança</p>
+    <div class="card blue" style="margin-top:32px;padding:26px 30px"><div style="font:600 26px/1.35 Geist;letter-spacing:-.01em">“A mentoria me ajudou na minha transição de gerente de uma pequena área para VP de uma área consideravelmente grande na empresa.”</div><div class="mono" style="margin-top:14px;font:500 16px/1 'Geist Mono';letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.75)">Danilo Rodrigues Batista · VP</div></div>
+  </div>
+  <div class="foot"><span>alexandrebogaciovas.com.br</span><img src="logo-claro.png"></div>
+</section>
+
+<!-- 12 · OFERTA -->
+<section class="p azul">
+  <div class="head"><span><b>●</b> O próximo passo</span><span>12 / 12</span></div>
+  <div class="in" style="justify-content:center">
+    <h2 style="font-size:70px">O roteiro abre a conversa.<br><span style="background:#fff;color:var(--accent);border-radius:14px;padding:0 .12em .04em;display:inline-block;margin-top:12px">A mentoria muda o padrão.</span></h2>
+    <p class="lead" style="color:rgba(255,255,255,.85)">Se você se reconheceu em algum destes sinais, o problema não é falta de esforço. É um padrão que se repete, e padrão se trata com método.</p>
+    <div class="grid2" style="margin-top:34px">
+      <div class="card" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);box-shadow:none;color:#fff"><div class="mini"><h4 style="color:rgba(255,255,255,.65)">01</h4><p>Você entrega. Mas não avança.</p></div></div>
+      <div class="card" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);box-shadow:none;color:#fff"><div class="mini"><h4 style="color:rgba(255,255,255,.65)">02</h4><p>Os mesmos padrões se repetem em contextos diferentes.</p></div></div>
+      <div class="card" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);box-shadow:none;color:#fff"><div class="mini"><h4 style="color:rgba(255,255,255,.65)">03</h4><p>Decisão sob pressão está custando caro.</p></div></div>
+      <div class="card" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);box-shadow:none;color:#fff"><div class="mini"><h4 style="color:rgba(255,255,255,.65)">04</h4><p>O próximo nível exige algo que não vem de mais trabalho.</p></div></div>
+    </div>
+    <p class="lead" style="color:rgba(255,255,255,.85);margin-top:30px">Na <b style="color:#fff">Mentoria Estratégica Comportamental</b> trabalhamos decisão, presença e direção, aplicadas ao seu contexto real. A primeira conversa é sem custo.</p>
+    <div style="margin-top:36px"><a class="btn" href="https://www.alexandrebogaciovas.com.br">Agendar primeira conversa <i>→</i></a></div>
+  </div>
+  <div class="foot"><span>alexandrebogaciovas.com.br</span><img src="logo-claro.png"></div>
+</section>
+
+</body>
+</html>

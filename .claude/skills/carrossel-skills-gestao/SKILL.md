@@ -65,6 +65,25 @@ Rodapé fixo (divisória + avatar + nome ✓ + posicionamento + logo) em todos o
   - Capa: foto escura, chip com nome e posicionamento, título grande em grotesca com trecho em caixa azul (`<em>`; use `<br>` antes da linha destacada), botão "→".
 - Qualquer tema aceita `"cores": {"accent": "#..."}` para trocar o acento.
 
+## Padrões de post (tema `moderno`) — alterne para não cansar a audiência
+
+Mesma marca, estruturas diferentes. Nunca publique o mesmo padrão duas vezes seguidas.
+
+| Padrão | Quando usar | Capa | Miolo | Gabarito |
+|---|---|---|---|---|
+| **A · Lista com prova** | ensinar técnicas (3–5 itens) | foto + título com caixa azul | `topico` com `numero` + visual em cards | `exemplo/padrao-a-lista.json` |
+| **B · Manifesto** | opinião, posicionamento, frases de autoridade | `"variante": "tipografica"` (sem foto, fundo azul) | `"tipo": "frase"` (uma frase gigante por slide, alternando `estilo` escuro/claro/azul, `apoio` opcional) | `exemplo/padrao-b-manifesto.json` |
+| **C · Mito × prática** | quebrar crenças do público | `"variante": "split"` (foto emoldurada, `"pb": true` p/ P&B) | `"tipo": "mito"` (`mito` riscado em cima, `verdade` em card escuro, `apoio`) | `exemplo/padrao-c-mitos.json` |
+| **D · Diagnóstico** | engajamento e salvamentos (quiz) | foto + pergunta | `topico` com `.quiz` (caixas para marcar) e `.faixas` (resultado 0–2 / 3–5 / 6–8) | `exemplo/padrao-d-diagnostico.json` |
+
+Fechamentos: `"tipo": "cta"` (fundo azul, `.chave` + `acao`) ou `"tipo": "autor"` (foto, nome, `bio` curta e CTA — reforça autoridade).
+Varie também a palavra do CTA, a cor do último slide (azul ou escuro) e a foto da capa.
+
+## Material rico (isca do CTA)
+
+`templates/material-pdf.html` é o modelo do PDF entregue na DM (12 páginas 1080×1350, mesma identidade): capa, contexto, etapas, perguntas, leitura das respostas, erros, **quem sou** (bio, números, depoimento) e **oferta** (sinais + botão "Agendar primeira conversa").
+Copie para uma pasta com os assets, edite o HTML e gere com `node <skill>/scripts/pdf.js <pasta>` (espera `roteiro.html` na pasta; gera o PDF e um PNG por página).
+
 ## Zona segura do Instagram (obrigatório antes de entregar)
 
 O Instagram sobrepõe elementos ao post 4:5 (1080×1350): contador "1/8" no canto superior direito, ícone de pessoas marcadas no inferior esquerdo, ícone de som no inferior direito, e a grade do perfil recorta a capa em 3:4 (~34 px de cada lateral).
