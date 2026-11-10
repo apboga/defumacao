@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Carrossel moderno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=block" rel="stylesheet">
+<style>
+/* =========================================================
+   TEMA MODERNO — executivo contemporâneo (deck de estratégia /
+   produto digital). Grotesca forte, grid, dados, ritmo claro/escuro.
+   ========================================================= */
+:root{
+  --bg:#F4F4F1;        /* off-white frio */
+  --card:#FFFFFF;
+  --ink:#0E0F12;       /* quase preto grafite */
+  --body:#55585F;
+  --muted:#8E9198;
+  --line:#E2E2DD;
+  --dark:#0F1115;      /* slides escuros */
+  --dark-2:#1A1D23;
+  --accent:#3355FF;    /* azul elétrico: modernização, decisão */
+  --accent-soft:#E3E8FF;
+  --alert:#FF5A36;     /* só para o "errado" */
+  --w:1080px;--h:1350px;--pad:84px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#666;font-family:Geist,Inter,sans-serif;-webkit-font-smoothing:antialiased}
+.slide{width:var(--w);height:var(--h);position:relative;overflow:hidden;background:var(--bg);color:var(--ink);margin:0 auto 40px}
+.slide.escuro{background:var(--dark);color:#fff}
+.slide.azul{background:var(--accent);color:#fff}
+.mono{font-family:'Geist Mono',monospace}
+
+/* grid de fundo sutil */
+.slide::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(to right,rgba(0,0,0,.035) 1px,transparent 1px);background-size:calc((var(--w) - 2*var(--pad))/6) 100%;background-position:var(--pad) 0;
+  -webkit-mask:linear-gradient(transparent,#000 15%,#000 85%,transparent)}
+.slide.escuro::after,.slide.azul::after{background-image:linear-gradient(to right,rgba(255,255,255,.05) 1px,transparent 1px)}
+.capa::after{display:none}
+
+/* ---------- barra de progresso (estilo stories) ---------- */
+.prog{position:absolute;left:var(--pad);right:var(--pad);top:64px;display:flex;gap:8px;z-index:3}
+.prog i{flex:1;height:4px;border-radius:4px;background:rgba(14,15,18,.12)}
+.prog i.on{background:var(--ink)}
+.escuro .prog i,.azul .prog i,.capa .prog i{background:rgba(255,255,255,.22)}
+.escuro .prog i.on,.azul .prog i.on,.capa .prog i.on{background:#fff}
+.label{position:absolute;left:var(--pad);right:var(--pad);top:94px;display:flex;justify-content:space-between;z-index:3;
+  font:500 17px/1 'Geist Mono';letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.label b{color:var(--accent);font-weight:600}
+.escuro .label,.azul .label{color:rgba(255,255,255,.6)} .azul .label b,.escuro .label b{color:#fff}
+
+/* ---------- conteúdo ---------- */
+.conteudo{position:absolute;left:var(--pad);right:var(--pad);top:150px;bottom:160px;display:flex;flex-direction:column;justify-content:center;z-index:2}
+.numero{display:inline-flex;align-items:center;gap:14px;font:600 20px/1 'Geist Mono';color:var(--accent);margin-bottom:26px}
+.numero span{display:grid;place-items:center;width:64px;height:64px;border-radius:16px;background:var(--accent);color:#fff;font:700 28px/1 Geist}
+.titulo{font:700 70px/1.0 Geist;letter-spacing:-.045em;max-width:var(--tw,900px)}
+.titulo em{font-style:normal;color:var(--accent)}
+.escuro .titulo em{color:#8FA3FF}
+.azul .titulo em{color:#fff;background:rgba(255,255,255,.18);border-radius:10px;padding:0 .14em}
+.texto{margin-top:34px;max-width:var(--bw,830px)}
+.texto p{font:400 30px/1.4 Geist;color:var(--body);letter-spacing:-.01em}
+.texto p+p{margin-top:20px}
+.texto b{color:var(--ink);font-weight:600}
+.escuro .texto p{color:rgba(255,255,255,.7)} .escuro .texto b{color:#fff}
+.azul .texto p{color:rgba(255,255,255,.85)}
+.visual{margin-top:50px}
+
+/* ---------- rodapé ---------- */
+.footer{position:absolute;left:var(--pad);right:var(--pad);bottom:56px;display:flex;align-items:center;gap:16px;z-index:3}
+.footer .avatar{width:60px;height:60px;border-radius:50%;object-fit:cover}
+.footer .name{font:600 22px/1 Geist;letter-spacing:-.01em}
+.footer .sub{font:500 14px/1 'Geist Mono';color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin-top:8px}
+.footer .logo{margin-left:auto;height:44px}
+.escuro .footer .sub,.azul .footer .sub{color:rgba(255,255,255,.6)}
+
+/* ---------- CAPA ---------- */
+.capa{background:var(--dark);color:#fff}
+.capa .foto{position:absolute;right:0;top:0;width:100%;height:100%;object-fit:cover}
+.capa .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,17,21,.55) 0%,rgba(15,17,21,0) 20%,rgba(15,17,21,0) 38%,rgba(15,17,21,.85) 62%,#0F1115 82%)}
+.capa .topo{position:absolute;left:var(--pad);right:var(--pad);top:96px;display:flex;justify-content:space-between;align-items:flex-start;z-index:3}
+.capa .chip{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);
+  border-radius:40px;padding:12px 20px;font:500 18px/1 Geist}
+.capa .chip i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(51,85,255,.3)}
+.capa .chip span{color:rgba(255,255,255,.6)}
+.capa .logo{height:56px}
+.capa .bloco{position:absolute;left:var(--pad);right:var(--pad);bottom:96px;z-index:3}
+.capa .tag{font:500 18px/1 'Geist Mono';letter-spacing:.08em;text-transform:uppercase;color:#8FA3FF;margin-bottom:24px}
+.capa h1{font:700 104px/1.06 Geist;letter-spacing:-.05em}
+.capa h1 em{font-style:normal;color:#fff;background:var(--accent);border-radius:14px;padding:0 .12em .04em;display:inline-block;margin-top:18px;line-height:1.02;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.capa .rodape{margin-top:40px;display:flex;justify-content:space-between;align-items:center;font:500 18px/1 'Geist Mono';color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.06em}
+.capa .rodape .seta{width:64px;height:64px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font:600 28px/1 Geist}
+
+/* =========================================================
+   COMPONENTES
+   ========================================================= */
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px 30px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 20px 40px -28px rgba(0,0,0,.25)}
+.card.dark{background:var(--dark);border-color:var(--dark);color:#fff}
+.card.blue{background:var(--accent);border-color:var(--accent);color:#fff}
+.cap{font:500 15px/1 'Geist Mono';letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;display:flex;justify-content:space-between}
+.card.dark .cap,.card.blue .cap{color:rgba(255,255,255,.6)}
+.linha{display:flex;align-items:center;justify-content:space-between;padding:15px 0;border-top:1px solid var(--line);font:500 25px/1.2 Geist;letter-spacing:-.01em}
+.pill{font:600 15px/1 'Geist Mono';letter-spacing:.04em;text-transform:uppercase;padding:9px 13px;border-radius:30px;background:var(--accent-soft);color:var(--accent)}
+.pill.alert{background:#FFE6E0;color:var(--alert)}
+.pill.dark{background:var(--ink);color:#fff}
+
+/* barras (scorecard) */
+.barra{margin:20px 0 0}
+.barra .top{display:flex;justify-content:space-between;font:600 25px/1 Geist;letter-spacing:-.01em;margin-bottom:12px}
+.barra .top span{font:500 20px/1 'Geist Mono';color:var(--muted)}
+.barra .trilho{height:18px;border-radius:18px;background:#ECECE8;overflow:hidden}
+.barra .trilho i{display:block;height:100%;border-radius:18px;background:var(--ink)}
+.barra.ac .trilho i{background:var(--accent)}
+
+/* antes x depois */
+.antes{font:500 28px/1.3 Geist;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--alert);text-decoration-thickness:3px}
+.depois{font:600 32px/1.25 Geist;letter-spacing:-.02em}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mini{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;font:500 22px/1.25 Geist;letter-spacing:-.01em}
+.mini b{font:600 17px/1.4 'Geist Mono';color:var(--accent)}
+
+/* fluxo */
+.fluxo{display:grid;grid-template-columns:1fr 36px 1fr 36px 1fr;align-items:stretch}
+.fluxo .seta{display:grid;place-items:center;font:600 26px/1 Geist;color:var(--muted)}
+.fluxo .card{padding:24px}
+.fluxo h4{font:600 15px/1 'Geist Mono';letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.fluxo .card.blue h4{color:rgba(255,255,255,.7)}
+.fluxo p{font:500 22px/1.3 Geist;letter-spacing:-.01em}
+.big{font:700 54px/1 Geist;letter-spacing:-.04em;margin:4px 0 8px}
+
+/* comparação */
+.vs .card h3{font:700 52px/1 Geist;letter-spacing:-.04em;margin:6px 0 18px}
+.vs .card h3 em{font-style:normal;color:var(--accent)}
+.vs .card.dark h3 em{color:#8FA3FF}
+.vs ul{list-style:none}
+.vs li{font:500 22px/1.3 Geist;padding:10px 0;border-top:1px solid var(--line);letter-spacing:-.01em}
+.vs .card.dark li{border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.85)}
+
+/* CTA */
+.cta .titulo{font-size:86px}
+.cta .chave{display:inline-block;background:#fff;color:var(--accent);border-radius:18px;padding:0 .16em}
+.cta .acao{margin-top:48px;display:inline-flex;align-items:center;gap:18px;background:#fff;color:var(--ink);border-radius:60px;padding:22px 30px;font:600 24px/1 Geist;align-self:flex-start}
+.cta .acao i{font-style:normal;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+const esc=s=>String(s??'');
+const prog=(i,n)=>`<div class="prog">${Array.from({length:n},(_,k)=>`<i class="${k<=i?'on':''}"></i>`).join('')}</div>`;
+function footer(a,s){const logo=(s.estilo==='escuro'||s.estilo==='azul')?a.logo_claro:a.logo;
+  return `<div class="footer">${a.avatar?`<img class="avatar" src="${a.avatar}">`:''}
+  <div><div class="name">${esc(a.nome)}</div><div class="sub">${esc(a.subtitulo)}</div></div>
+  ${logo?`<img class="logo" src="${logo}">`:''}</div>`}
+function capa(s,a,i,n){return `<section class="slide capa">
+  ${s.foto?`<img class="foto" src="${s.foto}" style="object-position:${s.foco||'center'}">`:''}<div class="shade"></div>
+  ${prog(i,n)}
+  <div class="topo"><div class="chip"><i></i>${esc(a.nome)} <span>· ${esc(a.subtitulo)}</span></div>${a.logo_claro?`<img class="logo" src="${a.logo_claro}">`:''}</div>
+  <div class="bloco">${s.kicker?`<div class="tag">${s.kicker}</div>`:''}<h1>${s.titulo}</h1>
+  <div class="rodape"><span>${s.swipe||'Deslize para ler'}</span><span class="seta">→</span></div></div></section>`}
+function topico(s,a,i,n){return `<section class="slide ${s.tipo} ${s.estilo||''}">
+  ${prog(i,n)}<div class="label"><span>${s.kicker||''}</span><span>${String(i+1).padStart(2,'0')}/${String(n).padStart(2,'0')}</span></div>
+  <div class="conteudo" style="${s.tw?`--tw:${s.tw}px;`:''}${s.bw?`--bw:${s.bw}px;`:''}">
+    ${s.numero?`<div class="numero"><span>${s.numero}</span>${s.numero_label||''}</div>`:''}
+    <h2 class="titulo">${s.titulo}</h2>
+    ${s.paragrafos?.length?`<div class="texto">${s.paragrafos.map(p=>`<p>${p}</p>`).join('')}</div>`:''}
+    ${s.acao?`<div class="acao">${s.acao} <i>→</i></div>`:''}
+    ${s.visual_img?`<div class="visual"><img src="${s.visual_img}" style="max-width:100%"></div>`:s.visual_html?`<div class="visual">${s.visual_html}</div>`:''}
+  </div>${footer(a,s)}</section>`}
+function render(c){const a=c.autor,n=c.slides.length;
+  if(c.cores)for(const[k,v]of Object.entries(c.cores))document.documentElement.style.setProperty('--'+k,v);
+  document.getElementById('root').innerHTML=c.slides.map((s,i)=>s.tipo==='capa'?capa(s,a,i,n):topico(s,a,i,n)).join('')}
+(async()=>{if(window.CONTEUDO)return render(window.CONTEUDO);
+  const q=new URLSearchParams(location.search).get('json');if(q)render(await(await fetch(q)).json())})();
+</script>
+</body>
+</html>

@@ -57,6 +57,12 @@ Rodapé fixo (divisória + avatar + nome ✓ + posicionamento + logo) em todos o
   - Componentes: `.caderno` + `.check` + `.desfecho` (página de caderno), `.riscado` + `.citacao` (frase errada riscada → frase certa), `.perguntas` (lista 01–04 em 2 colunas), `.tri` (framework de 3 colunas com letras grandes), `.duo` (comparação "Fala com você / Fala de você"), `.venn` (SVG de círculos; dê halo `stroke` + `paint-order` aos rótulos), `mark` (marca-texto).
   - Capa: foto escura, título serifado grande à esquerda com trecho em itálico sublinhado, nome/posicionamento em caixa alta no topo, "Deslize →".
   - Evite o clichê preto + dourado; a marca do autor entra pelo logo e pela foto.
+- **`moderno`** — executivo contemporâneo (deck de estratégia / produto digital) para líderes e empresas em modernização. Ative com `"template": "moderno"`. Gabarito: `exemplo/conteudo-moderno.json`.
+  - Geist (títulos 700, tracking -0.045em) + Geist Mono nos rótulos; off-white `#F4F4F1`, grafite `#0E0F12`, acento azul elétrico `#3355FF`, laranja `#FF5A36` só para o "errado".
+  - Barra de progresso estilo stories no topo, rótulo mono + contador `04/08`, grid de colunas sutil no fundo, selo numerado azul (`numero`) nas técnicas.
+  - Ritmo de cor por slide com `"estilo": "escuro"` (reflexão) e `"estilo": "azul"` (CTA); o rodapé troca para `logo_claro` automaticamente.
+  - Componentes: `.card` (`.dark`, `.blue`), `.linha` + `.pill` (lista de status), `.barra` (scorecard com barras de %), `.antes`/`.depois` (riscado → cartão escuro), `.grid2` + `.mini` (perguntas 01–04), `.fluxo` (3 cards com setas, o último azul com número grande `.big`), `.vs` (comparação Mentor × Patrocinador), `.chave` e `acao` no CTA.
+  - Capa: foto escura, chip com nome e posicionamento, título grande em grotesca com trecho em caixa azul (`<em>`; use `<br>` antes da linha destacada), botão "→".
 - Qualquer tema aceita `"cores": {"accent": "#..."}` para trocar o acento.
 
 ## Regras de fidelidade
