@@ -10,12 +10,10 @@
   "slides": [
     {
       "tipo": "capa",
-      "variante": "split",
-      "foto": "../marca/foto-pb.jpg",
-      "foco": "70% 20%",
-      "pb": true,
+      "foto": "../marca/foto-pb-retrato.jpg",
+      "desce": 0,
       "kicker": "Carreira executiva",
-      "titulo": "4 mitos que estão <em>travando sua promoção.</em>"
+      "titulo": "4 mitos que estão<br>travando sua <em>promoção.</em>"
     },
     {
       "tipo": "mito",

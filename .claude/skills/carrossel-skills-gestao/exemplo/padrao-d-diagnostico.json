@@ -10,10 +10,11 @@
   "slides": [
     {
       "tipo": "capa",
+      "variante": "split",
       "foto": "../marca/foto-azul.jpg",
-      "foco": "center 20%",
+      "foco": "center 35%",
       "kicker": "Diagnóstico · 2 minutos",
-      "titulo": "Você é visto<br>como líder ou<br>como <em>executor?</em>",
+      "titulo": "Você é visto como líder ou como <em>executor?</em>",
       "swipe": "Faça o teste"
     },
     {

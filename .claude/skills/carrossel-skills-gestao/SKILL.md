@@ -89,6 +89,8 @@ Mesma marca, estruturas diferentes. Nunca publique o mesmo padrão duas vezes se
 | **C · Mito × prática** | quebrar crenças do público | `"variante": "split"` (foto emoldurada, `"pb": true` p/ P&B) | `"tipo": "mito"` (`mito` riscado em cima, `verdade` em card escuro, `apoio`) | `exemplo/padrao-c-mitos.json` |
 | **D · Diagnóstico** | engajamento e salvamentos (quiz) | foto + pergunta | `topico` com `.quiz` (caixas para marcar) e `.faixas` (resultado 0–2 / 3–5 / 6–8) | `exemplo/padrao-d-diagnostico.json` |
 
+- **Capa com foto (moderno):** sem barra de progresso. A foto desce `150px` por padrão (campo `"desce"`) para a cabeça não ficar sob o selo/logo; use `"desce": 0` quando a própria imagem já tiver respiro no topo. Fotos muito fechadas no rosto (close) vão melhor na `"variante": "split"`.
+
 Fechamentos: `"tipo": "cta"` (fundo azul, `.chave` + `acao`) ou `"tipo": "autor"` (foto, nome, `bio` curta e CTA — reforça autoridade).
 Varie também a palavra do CTA, a cor do último slide (azul ou escuro) e a foto da capa.
 
