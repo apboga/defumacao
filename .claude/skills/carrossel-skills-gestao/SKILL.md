@@ -50,14 +50,14 @@ Rodapé fixo (divisória + avatar + nome ✓ + posicionamento + logo) em todos o
 
 ## Temas visuais
 
-- ** (padrão)** — réplica fiel da referência: público de tecnologia/IA, mini-interfaces (chat, arquivos , cards ✕/✓), acento laranja.
-- **** — mesma estrutura (capa com foto → slides título/texto/visual → rodapé), linguagem de revista de negócios para **líderes, diretores, mentoria e coaching**. Ative com  no JSON. Gabarito: .
-  - Fraunces (serifa com *itálico em verde-petróleo* nas palavras-chave) + Inter; papel , tinta , acento , terracota  só para o "errado".
-  - Texto alinhado à esquerda; faixa superior com rótulo () e contador ; números grandes () nas técnicas.
-  - Componentes:  +  +  (página de caderno),  +  (frase errada riscada → frase certa),  (lista 01–04 em 2 colunas),  (framework de 3 colunas com letras grandes),  (comparação "Fala com você / Fala de você"),  (SVG de círculos),  (marca-texto).
-  - Capa: foto escura, título serifado grande alinhado à esquerda com trecho em itálico sublinhado, nome/posicionamento em caixa alta no topo, "Deslize →".
+- **`carrossel` (padrão)** — réplica fiel da referência: público de tecnologia/IA, mini-interfaces (chat, arquivos `.md`, cards ✕/✓), acento laranja.
+- **`editorial`** — mesma estrutura (capa com foto → slides título/texto/visual → rodapé), linguagem de revista de negócios para **líderes, diretores, mentoria e coaching**. Ative com `"template": "editorial"` no JSON. Gabarito: `exemplo/conteudo-editorial.json`.
+  - Fraunces (serifa, palavras-chave em *itálico verde-petróleo*) + Inter; papel `#F3EEE6`, tinta `#1D1A17`, acento `#2E5E5B`, terracota `#B5523B` só para o "errado".
+  - Texto alinhado à esquerda; faixa superior com rótulo (`kicker`) e contador `02 / 08`; números grandes (`numero`) nas técnicas.
+  - Componentes: `.caderno` + `.check` + `.desfecho` (página de caderno), `.riscado` + `.citacao` (frase errada riscada → frase certa), `.perguntas` (lista 01–04 em 2 colunas), `.tri` (framework de 3 colunas com letras grandes), `.duo` (comparação "Fala com você / Fala de você"), `.venn` (SVG de círculos; dê halo `stroke` + `paint-order` aos rótulos), `mark` (marca-texto).
+  - Capa: foto escura, título serifado grande à esquerda com trecho em itálico sublinhado, nome/posicionamento em caixa alta no topo, "Deslize →".
   - Evite o clichê preto + dourado; a marca do autor entra pelo logo e pela foto.
-- Qualquer tema aceita  para trocar o acento.
+- Qualquer tema aceita `"cores": {"accent": "#..."}` para trocar o acento.
 
 ## Regras de fidelidade
 
