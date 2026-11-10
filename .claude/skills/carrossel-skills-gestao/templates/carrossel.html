@@ -175,6 +175,7 @@ function topico(s,a){
 
 function render(c){
   const a = c.autor;
+  if (c.cores) for (const [k,v] of Object.entries(c.cores)) document.documentElement.style.setProperty('--'+k, v);
   document.getElementById('root').innerHTML = c.slides.map(s =>
     s.tipo==='capa' ? capa(s,a) : topico(s,a)).join('');
 }
