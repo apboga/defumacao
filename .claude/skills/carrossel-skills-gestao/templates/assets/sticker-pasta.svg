@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140">
+  <!-- sticker "pasta com papel" estilo emoji 3D, como o da capa original -->
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9773E"/><stop offset="1" stop-color="#B0602C"/></linearGradient>
+    <linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7A06A"/><stop offset="1" stop-color="#D8884F"/></linearGradient>
+  </defs>
+  <path d="M8 38h48l10 10h84v80a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6z" fill="url(#b)"/>
+  <g transform="rotate(-12 80 50)">
+    <rect x="32" y="8" width="96" height="92" rx="5" fill="#FFFDF8" stroke="#E8E0D6" stroke-width="2"/>
+    <path d="M110 8h18v18z" fill="#E8E0D6"/>
+    <text x="78" y="62" text-anchor="middle" font-family="Plus Jakarta Sans,Arial Black,sans-serif" font-weight="800" font-size="25" fill="#1a1a1a" letter-spacing="1">{{TEXTO}}</text>
+  </g>
+  <path d="M4 66h152l-8 62a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6z" fill="url(#f)"/>
+  <path d="M4 66h152" stroke="#F3BE92" stroke-width="2"/>
+</svg>

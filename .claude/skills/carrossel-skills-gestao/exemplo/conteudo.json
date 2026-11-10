@@ -1,0 +1,87 @@
+{
+  "_comentario": "GABARITO: réplica 1:1 da estrutura do post original (8 slides). Troque autor, foto e textos para criar um carrossel novo. Strings aceitam HTML (<b>, <em>, <br>).",
+  "autor": {
+    "nome": "Seu Nome",
+    "subtitulo": "Seu posicionamento",
+    "verificado": true,
+    "avatar": "avatar-placeholder.png",
+    "logo": "../templates/assets/logo-placeholder.svg",
+    "logo_claro": "../templates/assets/logo-placeholder.svg"
+  },
+  "slides": [
+    {
+      "tipo": "capa",
+      "foto": "foto-capa-placeholder.jpg",
+      "foco": "center",
+      "linhas": ["Eu quero te mostrar", "um jeito bem mais", "inteligente de criar Skills"],
+      "destaque": [2],
+      "sticker": { "img": "../templates/assets/sticker-skill.svg", "x": 100, "y": 680, "w": 150 }
+    },
+    {
+      "tipo": "topico",
+      "titulo": "1. Ensine sua Skill a fugir das respostas óbvias da IA",
+      "paragrafos": [
+        "Descubra que soluções e caminhos óbvios/ genéricos a IA costuma seguir em determinadas tarefas.",
+        "Transforme essa descoberta em instruções específicas para burlar esse padrão genérico.",
+        "Assim, você já constrói a Skill para forçar a IA a ir além das respostas previsíveis."
+      ],
+      "visual_html": "<div class='row top'><div class='card' style='width:330px'><div class='card-head'><div class='ico'><svg><use href='#i-spark'/></svg></div><div class='t'>ChatGPT</div></div><div class='card-body'><div class='msg'><div class='av'><svg width='18' height='18'><use href='#i-user'/></svg></div><div class='bolha'>Crie 5 textos sobre liderança com IA</div></div><div class='msg'><div class='av'><svg width='16' height='16'><use href='#i-spark'/></svg></div><div class='bolha generica'>“A <span class='sublinhado'>IA veio</span> para revolucionar tudo”</div></div><div class='msg' style='margin-left:38px'><div class='bolha generica'>“<span class='sublinhado'>Quem não</span> se adaptar ficará para trás”</div></div></div></div><span class='seta'>→</span><div class='card' style='width:186px'><div class='card-head'><div class='ico'><svg><use href='#i-doc'/></svg></div><div class='t' style='font-size:17px'>DOCUMENTO</div></div><div class='card-body'><span class='arquivo' style='font-size:13px'>padroes-a-evitar.md</span><ul class='lista preta' style='margin-top:14px'><li>Clichês</li><li>Frases vagas</li><li>Conselhos óbvios</li></ul></div></div><span class='seta'>→</span><div class='card' style='width:300px'><div class='card-head'><div class='ico'><svg><use href='#i-skill'/></svg></div><div><div class='t'>SKILL</div><div class='s'>Instruções</div></div></div><div class='card-body'>Consulte <span class='arquivo' style='font-size:12px'>padroes-a-evitar.md</span>. Identifique respostas previsíveis e substitua-as por <b>argumentos específicos, exemplos concretos</b> e raciocínios que vão <b>além do óbvio.</b></div></div></div>"
+    },
+    {
+      "tipo": "topico",
+      "titulo": "2. Construa a inteligência antes de criar qualquer Skill",
+      "paragrafos": [
+        "Não crie uma Skill antes de reunir conhecimento suficiente sobre o assunto.",
+        "Se é uma skill de design por exemplo, busque conhecimento sobre composição, tipografia, contraste, hierarquia visual...",
+        "Boas Skills nascem da combinação de conhecimentos e técnicas bem escolhidos."
+      ],
+      "visual_html": "<div class='row top' style='gap:22px'><div class='card ruim' style='width:290px'><div class='card-head'><div class='ico'><svg><use href='#i-skill'/></svg></div><span class='sep'></span><div><div class='t'>Skill de design</div><div class='s'>Instruções</div></div><div class='badge x'>✕</div></div><div class='card-body' style='font-size:21px;line-height:1.45'>“Crie um layout bonito, moderno, fora do óbvio”</div></div><div class='card branco' style='width:488px'><div class='card-head'><div class='ico'><svg><use href='#i-skill'/></svg></div><span class='sep'></span><div><div class='t' style='font-size:22px'>Skill de design</div><div class='s' style='font-size:16px'>Instruções</div></div><div class='badge ok'>✓</div></div><div class='card-body' style='font-size:19px'><ul class='lista'><li>Aplique os fundamentos de design de<br><span class='arquivo sans'><svg><use href='#i-doc'/></svg>fundamentos.md</span></li><li>Evite os layouts genéricos descritos em<br><span class='arquivo sans'><svg><use href='#i-doc'/></svg>layouts-a-evitar.md</span></li><li>Siga a identidade visual consolidada em<br><span class='arquivo sans'><svg><use href='#i-doc'/></svg>identidade-visual.md</span></li></ul><span style='color:#6b625e'>[...]</span></div></div></div>"
+    },
+    {
+      "tipo": "topico",
+      "titulo": "3. Ensine a Skill a diagnosticar antes de escolher",
+      "paragrafos": [
+        "Imagine uma Skill para investigar atrasos nas entregas.",
+        "Antes de aplicar qualquer passo a passo engessado, ela precisa descobrir: existe sobrecarga, retrabalho, variação ou uma causa desconhecida?",
+        "Cada resposta exige uma investigação diferente.",
+        "Ensine esse raciocínio a ela."
+      ],
+      "visual_html": "<div class='card branco' style='width:620px'><div class='card-head'><div class='ico'><svg><use href='#i-skill'/></svg></div><div class='t'>SKILL</div><span class='sep'></span><span class='arquivo sans' style='background:var(--card)'><svg><use href='#i-doc'/></svg>raciocinio-escolha.md</span></div><div class='flow'><div class='passo'><small>01</small><span>Pense em A</span></div><div class='seta'>→</div><div class='passo'><small>02</small><span>Considere B</span></div><div class='seta'>→</div><div class='passo'><small>03</small><span>Compare possibilidades</span></div><div></div><div></div><div></div><div></div><div class='seta' style='margin-top:-22px;height:0'>↓</div><div class='passo final'><small>06</small><span>Escolha a melhor resposta</span></div><div class='seta'>←</div><div class='passo'><small>05</small><span>Deixe espaço para outra alternativa</span></div><div class='seta'>←</div><div class='passo'><small>04</small><span>Se A e B não resolverem, pergunte: por que não C?</span></div></div></div>"
+    },
+    {
+      "tipo": "topico",
+      "titulo": "4. Coloque materiais prontos pra Skill usar no trabalho",
+      "paragrafos": [
+        "Aqui na empresa por exemplo, temos uma <b>Skill de design de páginas</b> com componentes prontos: Cards, blocos de preços, ícones etc.",
+        "Quando cria uma página, ela usa esses componentes já aprovados, seguindo nossa identidade visual.",
+        "Assim, não precisa inventar cada elemento do zero."
+      ],
+      "bw": 800,
+      "visual_html": "<div style='width:860px;height:360px;border-radius:6px;background:repeating-linear-gradient(135deg,#ece4dd 0 14px,#f3ece6 14px 28px);display:grid;place-items:center;font:500 20px Inter;color:#8a807a'>print real do material (visual_img)</div>"
+    },
+    {
+      "tipo": "topico",
+      "titulo": "5. Transforme os erros em novos critérios para a Skill",
+      "paragrafos": [
+        "Sua Skill comete erros comuns? Guarde exemplos ruins de entregas, crie a versão corrigida e explique o que faltou.",
+        "Transforme essa correção em uma regra no treinamento da skill e teste novamente.",
+        "Assim, cada erro pode virar parte de um sistema de melhoria contínua."
+      ],
+      "visual_html": "<div class='row top' style='gap:20px'><div class='card' style='width:274px'><div class='card-head'><div class='ico'><svg><use href='#i-spark'/></svg></div><div class='t'>Claude</div><div class='badge x' style='background:none'>✕</div></div><div class='card-body' style='font-size:14px'><div class='msg'><div class='av'><svg width='16' height='16'><use href='#i-spark'/></svg></div><div class='bolha generica' style='font-size:13.5px'>“A inteligência artificial está revolucionando o mundo dos negócios. As empresas precisam se adaptar para não ficar para trás.”</div></div><div class='msg'><div class='av'><svg width='18' height='18'><use href='#i-user'/></svg></div><div class='bolha' style='font-size:13.5px'><b style='color:#8a6a55;font-weight:600'>Usuário</b><br>“Não gostei. Está muito genérico. Melhore isso seguindo a Skill.”</div></div></div></div><div class='card' style='width:380px'><div class='card-head'><div class='ico'><svg><use href='#i-spark'/></svg></div><div class='t'>Claude</div><div class='badge ok' style='background:none'>✓</div></div><div class='card-body' style='font-size:13px'><div class='msg'><div class='av'><svg width='16' height='16'><use href='#i-spark'/></svg></div><div class='bolha generica' style='font-size:13.5px'>“A inteligência artificial está revolucionando o mundo dos negócios. As empresas precisam se adaptar para não ficar para trás.”</div></div><div class='card branco' style='margin-left:12px'><div class='card-head' style='padding:8px'><div class='ico' style='width:30px;height:30px'><svg width='18' height='18'><use href='#i-skill'/></svg></div><div class='t' style='font-size:15px'>Arquivo da Skill</div><span class='arquivo' style='font-size:11px;margin-left:auto'>erros-e-correcoes.md</span></div><div style='padding:10px 12px;line-height:1.3'><div><span class='x-ico'>✕</span> <b>Exemplo ruim:</b><br>“A IA está revolucionando o mundo dos negócios.”</div><div style='margin-top:6px'><span class='ok-ico'>✓</span> <b>Exemplo corrigido:</b><br>“A IA permite eliminar etapas desnecessárias dos processos e liberar gestores de tarefas operacionais.”</div><div style='margin-top:6px'><b>Novo critério:</b><br>“Não faça afirmações genéricas sobre IA. Explique o que muda na prática e como essa mudança acontece.”</div></div></div></div></div></div>"
+    },
+    {
+      "tipo": "fechamento",
+      "titulo": "Agora imagine isso na gestão da empresa inteira.",
+      "tw": 640,
+      "bw": 640,
+      "paragrafos": [
+        "Conhecimentos que hoje ficam na cabeça dos profissionais podem virar Skills com técnicas, critérios, modelos e verificações, reutilizadas por diferentes agentes e processos.",
+        "Você começa a construir um sistema em que a inteligência da empresa pode ser compartilhada, aplicada e continuamente aprimorada."
+      ]
+    },
+    {
+      "tipo": "cta",
+      "titulo": "Comenta “<em>skills</em>” que te envio um guia de skills para gestores"
+    }
+  ]
+}

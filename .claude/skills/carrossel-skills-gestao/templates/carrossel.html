@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Carrossel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&family=JetBrains+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+/* =========================================================
+   TOKENS — medidos em pixel nos slides originais (1080x1350)
+   ========================================================= */
+:root{
+  --bg:#F8F3F0;          /* fundo creme-rosado de todos os slides internos */
+  --ink:#17100D;         /* títulos (quase preto, quente) */
+  --body:#615853;        /* parágrafos (cinza-marrom quente) */
+  --muted:#8A807A;       /* subtítulos de card, legendas */
+  --line:#D4CDC7;        /* divisória do rodapé e bordas de card */
+  --card:#F8F1EB;        /* card "neutro" (um tom mais quente que o fundo) */
+  --card-white:#FEFDFB;  /* card "certo" / destaque */
+  --tile:#EFE6DE;        /* quadrado do ícone no header do card */
+  --accent:#DE9D68;      /* laranja-terracota: box da capa e palavra-chave do CTA */
+  --accent-ink:#BA7532;  /* bullets e detalhes laranja escuros */
+  --cream-box:#F6F0EA;   /* boxes claros da capa */
+  --pink:#F4DBD7;        /* balão de resposta genérica/ruim */
+  --red:#D9342B;  --red-bg:#FBE4E1;
+  --green:#2E9E4A;--green-bg:#E6F4E4;
+  --verified:#4BA3F0;
+  --logo:#D9D3CE;
+  --w:1080px; --h:1350px; --gutter:56px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.slide{width:var(--w);height:var(--h);position:relative;overflow:hidden;background:var(--bg);margin:0 auto 40px}
+
+/* ---------- RODAPÉ (slides 2..N) ---------- */
+.footer{position:absolute;left:var(--gutter);right:var(--gutter);top:1187px;border-top:1.5px solid var(--line);height:163px}
+.footer .avatar{position:absolute;left:-2px;top:27px;width:92px;height:92px;border-radius:50%;object-fit:cover;background:#ccc}
+.footer .who{position:absolute;left:96px;top:42px}
+.footer .name{font:500 30px/1 Inter;color:#544F4C;letter-spacing:-.01em;display:flex;align-items:center;gap:8px}
+.footer .sub{font:400 20px/1 Inter;color:#6B625E;margin-top:12px}
+.footer .logo{position:absolute;right:4px;top:58px;height:46px;opacity:1}
+.verified{display:inline-block;width:.8em;height:.8em;flex:none}
+
+/* ---------- CAPA ---------- */
+.capa{background:#111}
+.capa .foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.capa .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 55%,rgba(0,0,0,.35) 100%)}
+.capa .pill{position:absolute;left:76px;top:86px;height:45px;padding:0 22px;border-radius:30px;background:rgba(40,24,18,.82);
+  display:flex;align-items:center;gap:8px;color:#fff;font:400 20px/1 Inter;backdrop-filter:blur(6px)}
+.capa .pill b{font-weight:700}
+.capa .pill i{font-style:normal;opacity:.7;margin:0 2px}
+.capa .logo{position:absolute;right:70px;top:80px;height:52px;opacity:.55}
+.capa .headline{position:absolute;left:0;right:0;bottom:var(--hb,245px);display:flex;flex-direction:column;align-items:center;gap:11px}
+.capa .linha{display:inline-block;background:var(--cream-box);color:#111;border-radius:7px;
+  font:800 66px/1 'Plus Jakarta Sans',sans-serif;letter-spacing:-.015em;padding:13px 32px 17px;white-space:nowrap}
+.capa .linha.destaque{background:var(--accent)}
+.capa .sticker{position:absolute;width:150px;transform:rotate(-14deg);filter:drop-shadow(0 8px 14px rgba(0,0,0,.35));z-index:2}
+.capa .sticker-emoji{position:absolute;font-size:120px;transform:rotate(-14deg);filter:drop-shadow(0 8px 14px rgba(0,0,0,.35));z-index:2}
+
+/* ---------- SLIDES DE TÓPICO / FECHAMENTO ---------- */
+.conteudo{position:absolute;left:0;right:0;top:0;height:1187px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 0 30px}
+.titulo{font:500 51px/1.15 'Instrument Sans',sans-serif;letter-spacing:-.012em;color:var(--ink);text-align:center;max-width:var(--tw,700px)}
+.texto{margin-top:44px;max-width:var(--bw,700px);text-align:center}
+.texto p{font:400 32px/1.25 Inter;color:var(--body);letter-spacing:0}
+.texto p + p{margin-top:40px}
+.texto b{font-weight:700;color:#5A4E48}
+.visual{margin-top:70px;width:870px;display:flex;justify-content:center}
+.visual img{max-width:100%;display:block}
+.fechamento .texto p{font-size:31px;line-height:1.38}
+.cta .titulo{font-size:52px;max-width:520px}
+.cta .titulo em{font-style:normal;color:var(--accent);font-weight:700}
+.cta .conteudo{padding-top:70px}
+
+/* =========================================================
+   COMPONENTES DE "PROVA VISUAL" (mini-UI dos slides 2–6)
+   ========================================================= */
+.row{display:flex;align-items:center;gap:10px}
+.row.top{align-items:stretch}
+.seta{font:400 26px/1 Inter;color:#3a3330;padding:0 2px;align-self:center}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:12px;box-shadow:0 2px 6px rgba(80,50,30,.06);overflow:hidden;text-align:left}
+.card.branco{background:var(--card-white);border-color:#EDE7E2}
+.card.ruim{border-style:dashed;background:linear-gradient(#FBF4EF,#F8F1EB)}
+.card-head{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1.5px solid var(--line);margin:0 6px}
+.card-head .ico{width:40px;height:40px;border-radius:9px;background:var(--tile);display:grid;place-items:center;flex:none}
+.card-head .ico svg{width:24px;height:24px}
+.card-head .sep{width:1.5px;align-self:stretch;background:var(--line)}
+.card-head .t{font:700 19px/1.1 Inter;color:#1d1714}
+.card-head .s{font:400 14px/1.2 Inter;color:var(--muted);margin-top:3px}
+.card-head .badge{margin-left:auto;width:34px;height:34px;border-radius:8px;display:grid;place-items:center;font:700 22px/1 Inter}
+.badge.x{background:var(--red-bg);color:var(--red)}
+.badge.ok{background:var(--green-bg);color:var(--green)}
+.card-body{padding:14px 16px 16px;font:400 16px/1.38 Inter;color:#2a2421}
+.card-body b{font-weight:700;color:#111}
+.msg{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.msg .av{width:28px;height:28px;border-radius:7px;background:var(--tile);display:grid;place-items:center;flex:none;font-size:15px}
+.bolha{background:#EFE7E0;border-radius:8px;padding:7px 10px;font:400 14.5px/1.35 Inter;color:#2a2421}
+.bolha.generica{background:var(--pink)}
+.sublinhado{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:4px;text-decoration-thickness:1.5px}
+.arquivo{display:inline-flex;align-items:center;gap:7px;background:#FFFDF9;border:1.5px solid #E6DED7;border-radius:8px;padding:5px 10px;font:500 15px/1 'JetBrains Mono',monospace;color:#2a2421;white-space:nowrap}
+.arquivo.sans{font-family:Inter;font-weight:600}
+.arquivo svg{width:15px;height:15px}
+.lista{list-style:none}
+.lista li{position:relative;padding-left:22px;margin:0 0 12px}
+.lista li::before{content:"";position:absolute;left:2px;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--accent-ink)}
+.lista.preta li::before{background:#2a2421;width:5px;height:5px}
+.flow{display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr;row-gap:24px;align-items:stretch;padding:16px 12px 18px}
+.passo{background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:9px 16px 14px;min-height:78px}
+.passo small{display:block;font:600 12px/1 Inter;color:#3a3330;margin-bottom:8px}
+.passo span{font:700 19px/1.08 Inter;color:#1d1714;display:block}
+.passo.final{border:2px solid #1d1714}
+.flow .seta{display:grid;place-items:center}
+.ok-ico{color:var(--green);font-weight:700}.x-ico{color:var(--red);font-weight:700}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- ícones reutilizáveis -->
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="#2a2421" stroke-width="1.6" stroke-linejoin="round" d="M6 2.8h8l4.2 4.2V21H6z M14 2.8V7h4.2 M9 12h6 M9 15.5h6"/></symbol>
+  <symbol id="i-skill" viewBox="0 0 24 24"><path fill="none" stroke="#2a2421" stroke-width="1.6" stroke-linejoin="round" d="M5 2.8h7.5l4 4V11 M12.5 2.8v4h4 M10 21H5V2.8"/><circle cx="16.5" cy="16.5" r="2.6" fill="none" stroke="#2a2421" stroke-width="1.6"/><path stroke="#2a2421" stroke-width="1.6" d="M16.5 11.8v1.6M16.5 19.6v1.6M11.8 16.5h1.6M19.6 16.5h1.6M13.2 13.2l1.1 1.1M18.7 18.7l1.1 1.1M13.2 19.8l1.1-1.1M18.7 14.3l1.1-1.1"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="#2a2421" stroke-width="1.6"/><path fill="none" stroke="#2a2421" stroke-width="1.6" d="M4 21c1.2-4 4.3-6 8-6s6.8 2 8 6"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><g stroke="#1d1714" stroke-width="2.2" stroke-linecap="round"><path d="M12 2.5v19M2.5 12h19M5.3 5.3l13.4 13.4M18.7 5.3 5.3 18.7"/></g></symbol>
+  <symbol id="i-verified" viewBox="0 0 24 24"><path fill="#4BA3F0" d="M12 1.5l2.4 1.8 3-.2 1 2.8 2.6 1.6-.6 2.9 1.4 2.6-2 2.2-.2 3-2.9.7-1.8 2.4L12 21.8 9.1 23.3l-1.8-2.4-2.9-.7-.2-3-2-2.2 1.4-2.6-.6-2.9 2.6-1.6 1-2.8 3 .2z"/><path fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M7.6 12.2l3 3 5.8-6"/></symbol>
+</svg>
+
+<script>
+/* ---------------------------------------------------------
+   Renderiza a partir de window.CONTEUDO (injetado pelo render.js)
+   ou de ?json=caminho.json
+   --------------------------------------------------------- */
+const esc = s => String(s ?? '');
+const verified = '<svg class="verified"><use href="#i-verified"/></svg>';
+
+function footer(a){
+  return `<div class="footer">
+    ${a.avatar ? `<img class="avatar" src="${a.avatar}">` : `<div class="avatar"></div>`}
+    <div class="who"><div class="name">${esc(a.nome)} ${a.verificado!==false?verified:''}</div>
+    <div class="sub">${esc(a.subtitulo)}</div></div>
+    ${a.logo ? `<img class="logo" src="${a.logo}">` : ''}
+  </div>`;
+}
+
+function capa(s,a){
+  const linhas = s.linhas.map((l,i)=>{
+    const d = (s.destaque ?? [s.linhas.length-1]).includes(i);
+    return `<span class="linha${d?' destaque':''}">${l}</span>`;
+  }).join('');
+  const st = s.sticker || {};
+  const stickerHtml = st.img ? `<img class="sticker" src="${st.img}" style="left:${st.x??105}px;top:${st.y??690}px;width:${st.w??150}px">`
+    : st.emoji ? `<div class="sticker-emoji" style="left:${st.x??100}px;top:${st.y??670}px">${st.emoji}</div>` : '';
+  return `<section class="slide capa">
+    ${s.foto?`<img class="foto" src="${s.foto}" style="object-position:${s.foco||'center'}">`:''}
+    <div class="shade"></div>
+    <div class="pill"><b>${esc(a.nome)}</b><i>|</i>${esc(a.subtitulo)} ${a.verificado!==false?verified:''}</div>
+    ${a.logo_claro?`<img class="logo" src="${a.logo_claro}">`:''}
+    ${stickerHtml}
+    <div class="headline" style="--hb:${s.base??245}px">${linhas}</div>
+  </section>`;
+}
+
+function topico(s,a){
+  const vis = s.visual_img ? `<div class="visual"><img src="${s.visual_img}"></div>`
+            : s.visual_html ? `<div class="visual">${s.visual_html}</div>` : '';
+  return `<section class="slide ${s.tipo}">
+    <div class="conteudo" style="${s.tw?`--tw:${s.tw}px;`:''}${s.bw?`--bw:${s.bw}px;`:''}">
+      <h2 class="titulo">${s.titulo}</h2>
+      ${s.paragrafos?.length?`<div class="texto">${s.paragrafos.map(p=>`<p>${p}</p>`).join('')}</div>`:''}
+      ${vis}
+    </div>
+    ${footer(a)}
+  </section>`;
+}
+
+function render(c){
+  const a = c.autor;
+  document.getElementById('root').innerHTML = c.slides.map(s =>
+    s.tipo==='capa' ? capa(s,a) : topico(s,a)).join('');
+}
+
+(async()=>{
+  if (window.CONTEUDO) return render(window.CONTEUDO);
+  const q = new URLSearchParams(location.search).get('json');
+  if (q) render(await (await fetch(q)).json());
+})();
+</script>
+</body>
+</html>
