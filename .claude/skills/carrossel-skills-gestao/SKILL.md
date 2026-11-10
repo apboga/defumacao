@@ -65,6 +65,12 @@ Rodapé fixo (divisória + avatar + nome ✓ + posicionamento + logo) em todos o
   - Capa: foto escura, chip com nome e posicionamento, título grande em grotesca com trecho em caixa azul (`<em>`; use `<br>` antes da linha destacada), botão "→".
 - Qualquer tema aceita `"cores": {"accent": "#..."}` para trocar o acento.
 
+## Zona segura do Instagram (obrigatório antes de entregar)
+
+O Instagram sobrepõe elementos ao post 4:5 (1080×1350): contador "1/8" no canto superior direito, ícone de pessoas marcadas no inferior esquerdo, ícone de som no inferior direito, e a grade do perfil recorta a capa em 3:4 (~34 px de cada lateral).
+- Nada importante (logo, nome, @, contador, texto) acima de **y=130**, abaixo de **y=1250** ou a menos de **60 px** das laterais. O tema `moderno` já segue essa regra.
+- Depois de renderizar, rode `python3 -I <skill>/scripts/safezone.py <pasta>/out` e abra o `safezone.jpg`: nada relevante pode cair nas áreas vermelhas, e tudo deve ficar dentro do retângulo verde.
+
 ## Regras de fidelidade
 
 - Não troque a paleta, as fontes ou o grid sem o usuário pedir — a força do formato é a consistência.
