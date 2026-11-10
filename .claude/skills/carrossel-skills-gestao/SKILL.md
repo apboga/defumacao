@@ -105,6 +105,7 @@ Copie o HTML para uma pasta irmã de `marca/` (ou ajuste os caminhos `../marca/`
 
 O Instagram sobrepõe elementos ao post 4:5 (1080×1350): contador "1/8" no canto superior direito, ícone de pessoas marcadas no inferior esquerdo, ícone de som no inferior direito, e a grade do perfil recorta a capa em 3:4 (~34 px de cada lateral).
 - Nada importante (logo, nome, @, contador, texto) acima de **y=130**, abaixo de **y=1250** ou a menos de **60 px** das laterais. O tema `moderno` já segue essa regra.
+- **Obrigatório:** rode `node <skill>/scripts/checar-margens.js conteudo.json`. Ele mede a posição de cada texto, logo, avatar e ícone e reprova qualquer invasão (até 1 px). Só entregue com "✓ tudo dentro da zona segura".
 - Depois de renderizar, rode `python3 -I <skill>/scripts/safezone.py <pasta>/out` e abra o `safezone.jpg`: nada relevante pode cair nas áreas vermelhas, e tudo deve ficar dentro do retângulo verde.
 
 ## Regras de fidelidade
