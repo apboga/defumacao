@@ -1,9 +1,22 @@
 ---
 name: carrossel-skills-gestao
-description: Cria carrosséis de Instagram (1080x1350, 4:5) no estilo "capa com foto + boxes empilhados, slides internos creme com título, corpo curto e mini-interface de prova, fechamento de visão e CTA de comentário" — réplica do formato do post de referência sobre Skills. Use quando o usuário pedir um carrossel nesse estilo, "réplica daquele carrossel", "carrossel tipo lista numerada com prova visual", ou quiser transformar um tema em post de Instagram educativo para gestores/profissionais. Gera a copy (slides + legenda) e renderiza os PNGs.
+description: Skill de conteúdo do Alexandre Bogaciovas (Mentor Estratégico Comportamental). Cria carrosséis de Instagram 1080x1350 no design "moderno executivo" da marca dele (Geist, azul elétrico, grafite, logo AB) em 4 padrões que se alternam — Lista com prova, Manifesto, Mito × prática e Diagnóstico — e o PDF de material rico (isca do CTA) com bio e oferta da mentoria. Use quando Alexandre pedir um carrossel, post, variação de padrão, material/roteiro em PDF ou "aquele estilo moderno". Também contém os temas "carrossel" (réplica do post de referência sobre Skills) e "editorial". Gera copy + legenda, renderiza PNG/PDF, confere a zona segura do Instagram e sempre informa o link da pasta onde salvou.
 ---
 
-# Carrossel "Lista com prova visual" (réplica)
+# Carrossel do Alexandre Bogaciovas
+
+## Padrão de trabalho (sempre)
+
+1. **Design padrão: tema `moderno`** com a marca em `marca/` (capa, avatar, fotos, logo claro e escuro). Nome: Alexandre Bogaciovas · Posicionamento: Mentor Estratégico Comportamental · site alexandrebogaciovas.com.br.
+2. **Público:** líderes, gestores, diretores, empresários. A dor é do próprio leitor (ele também não é reconhecido, não negocia entregas, vê outros passarem), nunca "o talento que você está perdendo". Tom: mentor sóbrio, direto, sem autoajuda.
+3. **Alterne os padrões** (A → B → D → C) para não cansar a audiência.
+4. **Confira a zona segura** com `scripts/safezone.py` antes de entregar.
+5. **Salve as entregas** em `.claude/entregas/AAAA-MM-<nome>/` do repositório (PNGs, conteudo.json, PDF), faça commit e push, e **sempre termine trazendo o link da pasta** no GitHub, no formato `https://github.com/<owner>/<repo>/tree/<branch>/.claude/entregas/<pasta>`, além do link da skill.
+6. Os exemplos em `exemplo/padrao-*.json` já apontam para `../marca/`; copie um deles como ponto de partida.
+
+---
+
+# Tema original: "Lista com prova visual" (réplica)
 
 Formato decodificado de um carrossel real (8 slides). Prints originais em `referencia/slide01.jpg … slide08.jpg` — **olhe-os antes de começar** se precisar de referência visual.
 
@@ -82,7 +95,7 @@ Varie também a palavra do CTA, a cor do último slide (azul ou escuro) e a foto
 ## Material rico (isca do CTA)
 
 `templates/material-pdf.html` é o modelo do PDF entregue na DM (12 páginas 1080×1350, mesma identidade): capa, contexto, etapas, perguntas, leitura das respostas, erros, **quem sou** (bio, números, depoimento) e **oferta** (sinais + botão "Agendar primeira conversa").
-Copie para uma pasta com os assets, edite o HTML e gere com `node <skill>/scripts/pdf.js <pasta>` (espera `roteiro.html` na pasta; gera o PDF e um PNG por página).
+Copie o HTML para uma pasta irmã de `marca/` (ou ajuste os caminhos `../marca/`), edite e gere com `node <skill>/scripts/pdf.js arquivo.html [saida] [nome.pdf]` (gera o PDF e um PNG por página).
 
 **Regra de CTA da venda (material e fechamentos):** o material entregue deve funcionar sozinho. Nunca insinue que ele não resolve sem a mentoria. Estrutura: "Use isto. Depois me conta." → convite para responder contando o resultado (abre conversa) → "E se quiser ir além, com alguém ao seu lado…" → o que a mentoria acrescenta (verbos positivos: preparar juntos, ler o contexto, fortalecer, desenhar) → botão "Conversar sobre o próximo passo · primeira conversa sem custo". No carrossel-diagnóstico, o CTA leva ao material ("Te envio o roteiro dessa conversa"), não direto à venda.
 

@@ -3,14 +3,14 @@
   "autor": {
     "nome": "Alexandre Bogaciovas",
     "subtitulo": "Mentor Estratégico Comportamental",
-    "avatar": "avatar-alexandre.jpg",
-    "logo": "logo-escuro.png",
-    "logo_claro": "logo-claro.png"
+    "avatar": "../marca/avatar-alexandre.jpg",
+    "logo": "../marca/logo-escuro.png",
+    "logo_claro": "../marca/logo-claro.png"
   },
   "slides": [
     {
       "tipo": "capa",
-      "foto": "foto-azul.jpg",
+      "foto": "../marca/foto-azul.jpg",
       "foco": "center 20%",
       "kicker": "Diagnóstico · 2 minutos",
       "titulo": "Você é visto<br>como líder ou<br>como <em>executor?</em>",
