@@ -48,6 +48,17 @@ Rodapé fixo (divisória + avatar + nome ✓ + posicionamento + logo) em todos o
    - [ ] Mini-UI legível no celular (texto ≥ 13 px no canvas).
 6. **Entregue** os PNGs + a legenda pronta para colar.
 
+## Temas visuais
+
+- ** (padrão)** — réplica fiel da referência: público de tecnologia/IA, mini-interfaces (chat, arquivos , cards ✕/✓), acento laranja.
+- **** — mesma estrutura (capa com foto → slides título/texto/visual → rodapé), linguagem de revista de negócios para **líderes, diretores, mentoria e coaching**. Ative com  no JSON. Gabarito: .
+  - Fraunces (serifa com *itálico em verde-petróleo* nas palavras-chave) + Inter; papel , tinta , acento , terracota  só para o "errado".
+  - Texto alinhado à esquerda; faixa superior com rótulo () e contador ; números grandes () nas técnicas.
+  - Componentes:  +  +  (página de caderno),  +  (frase errada riscada → frase certa),  (lista 01–04 em 2 colunas),  (framework de 3 colunas com letras grandes),  (comparação "Fala com você / Fala de você"),  (SVG de círculos),  (marca-texto).
+  - Capa: foto escura, título serifado grande alinhado à esquerda com trecho em itálico sublinhado, nome/posicionamento em caixa alta no topo, "Deslize →".
+  - Evite o clichê preto + dourado; a marca do autor entra pelo logo e pela foto.
+- Qualquer tema aceita  para trocar o acento.
+
 ## Regras de fidelidade
 
 - Não troque a paleta, as fontes ou o grid sem o usuário pedir — a força do formato é a consistência.

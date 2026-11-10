@@ -21,8 +21,9 @@ if (!jsonArg) { console.error('uso: node render.js conteudo.json [saida]'); proc
 const jsonPath = path.resolve(jsonArg);
 const baseDir = path.dirname(jsonPath);
 const outDir = path.resolve(outArg || path.join(baseDir, 'out'));
-const template = path.resolve(__dirname, '../templates/carrossel.html');
 const conteudo = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+// "template": "editorial" no JSON usa templates/editorial.html (padrão: carrossel.html)
+const template = path.resolve(__dirname, '../templates/' + (conteudo.template || 'carrossel') + '.html');
 
 // Converte caminhos locais em data URIs para não depender de file:// cross-origin
 const MIME = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.gif': 'image/gif' };

@@ -1,0 +1,82 @@
+{
+  "template": "editorial",
+  "autor": {
+    "nome": "Alexandre Bogaciovas",
+    "subtitulo": "Mentor Estratégico Comportamental",
+    "avatar": "avatar-alexandre.jpg",
+    "logo": "logo-escuro.png",
+    "logo_claro": "logo-claro.png"
+  },
+  "slides": [
+    {
+      "tipo": "capa",
+      "foto": "capa-alexandre.jpg",
+      "foco": "center 20%",
+      "kicker": "Carreira e liderança",
+      "titulo": "Por que o seu esforço está no <em><u>lugar errado</u></em>"
+    },
+    {
+      "tipo": "topico",
+      "kicker": "A dor",
+      "titulo": "Existe um desgaste que não vem do <em>excesso de trabalho</em>",
+      "paragrafos": [
+        "Você entrega, resolve problemas e assume responsabilidades que nem sempre são suas. Mas, quando surgem as oportunidades, seu nome não aparece."
+      ],
+      "visual_html": "<div class='caderno' style='width:760px'><div class='cab'>Sua semana</div><div class='check'><i>✓</i>Fiquei até mais tarde</div><div class='check'><i>✓</i>Entreguei antes do prazo</div><div class='check'><i>✓</i>Cobri a falta de um colega</div><div class='check'><i>✓</i>Disse sim pra mais um projeto</div><div class='desfecho'>Promoção do trimestre: <b>outra pessoa.</b></div></div>"
+    },
+    {
+      "tipo": "topico",
+      "kicker": "A distinção",
+      "titulo": "Ser competente não é o mesmo que <em>ser considerado</em>",
+      "paragrafos": [
+        "O problema não é só a promoção que não veio. É começar a questionar o próprio valor e trabalhar ainda mais pra provar algo que já demonstrou.",
+        "Só que são três coisas diferentes. E elas nem sempre caminham juntas."
+      ],
+      "visual_html": "<div class='venn'><svg viewBox='0 0 880 400' xmlns='http://www.w3.org/2000/svg'>\n<g fill='none' stroke-width='2'><circle cx='290' cy='230' r='160' stroke='#8C847C'/><circle cx='440' cy='230' r='160' stroke='#8C847C'/><circle cx='590' cy='230' r='160' stroke='#2E5E5B' fill='rgba(46,94,91,.09)'/></g>\n<g font-family='Fraunces' font-size='31' text-anchor='middle' stroke='#F3EEE6' stroke-width='9' paint-order='stroke' stroke-linejoin='round'>\n<text x='232' y='222' fill='#1D1A17'>Ser</text><text x='232' y='262' fill='#1D1A17'>competente</text>\n<text x='648' y='222' fill='#2E5E5B' stroke='#E2E3DB'>Ser</text><text x='648' y='262' fill='#2E5E5B' stroke='#E2E3DB'>considerado</text>\n<text x='440' y='34' font-size='28' fill='#5A534D'>Ser percebido como competente</text></g>\n<line x1='440' y1='48' x2='440' y2='92' stroke='#8C847C' stroke-width='1.5'/>\n<text x='440' y='236' font-family='Inter' font-weight='600' font-size='13' letter-spacing='2.5' fill='#2E5E5B' text-anchor='middle' stroke='#EAEAE2' stroke-width='7' paint-order='stroke'>RECONHECIMENTO</text>\n</svg></div>"
+    },
+    {
+      "tipo": "topico",
+      "kicker": "Técnica · Busca de feedback",
+      "titulo": "Pare de discutir esforço. <em>Negocie critérios.</em>",
+      "paragrafos": [
+        "Descubra o que realmente decide promoção ali dentro. Se ninguém explica os critérios, isso também é uma informação."
+      ],
+      "visual_html": "<div class='rotulo x'>Em vez de</div><div class='riscado'>“Por que eu nunca sou lembrado nas promoções?”</div><div class='rotulo ok' style='margin-top:30px'>Pergunte</div><div class='citacao'>“Considerando minhas entregas, o que precisaria acontecer pra eu ser considerado para uma posição maior?”</div><div class='perguntas'><div><b>01</b>Quais resultados são esperados?</div><div><b>02</b>Que competências faltam demonstrar?</div><div><b>03</b>Quem participa da decisão?</div><div><b>04</b>Quando revisamos minha evolução?</div></div>",
+      "numero": "01"
+    },
+    {
+      "tipo": "topico",
+      "kicker": "Técnica · Visibilidade",
+      "titulo": "Transforme contribuição em <em>impacto percebido</em>",
+      "paragrafos": [
+        "Uma entrega pode ser excelente e, ainda assim, invisível pra quem decide sobre sua carreira. Conte em três partes."
+      ],
+      "visual_html": "<div class='rotulo x'>Em vez de</div><div class='riscado' style='margin-bottom:34px'>“Trabalhei intensamente na reestruturação da área.”</div><div class='tri'><div><div class='letra'>P</div><h4>Problema</h4><p>Pedidos com 30% de retrabalho e atraso constante.</p></div><div><div class='letra'>I</div><h4>Intervenção</h4><p>Liderei o redesenho do fluxo com 3 áreas.</p></div><div><div class='letra'>I</div><h4>Impacto</h4><p><b style='color:#1D1A17'>Prazo médio caiu de 9 para 5 dias.</b></p></div></div>",
+      "numero": "02"
+    },
+    {
+      "tipo": "topico",
+      "kicker": "Técnica · Patrocínio",
+      "titulo": "Identifique quem realmente <em>influencia sua evolução</em>",
+      "paragrafos": [
+        "Observe quem participa das decisões e quem conhece seu trabalho além do seu gestor. Construa credibilidade com essas pessoas."
+      ],
+      "visual_html": "<div class='duo'><div><h4>Mentor</h4><div class='frase'>Fala <em>com</em> você.</div><ul><li>Aconselha</li><li>Ajuda a pensar o próximo passo</li></ul></div><div><h4>Patrocinador</h4><div class='frase'>Fala <em>de</em> você.</div><ul><li>Indica você para projetos</li><li>Defende seu nome na sala de decisão</li></ul></div></div>",
+      "numero": "03"
+    },
+    {
+      "tipo": "fechamento",
+      "kicker": "Uma última reflexão",
+      "titulo": "Nem toda falta de reconhecimento se resolve <em>trabalhando mais.</em>",
+      "paragrafos": [
+        "Se você entrega, comunica resultados, conhece os critérios e constrói relações, mas continua sem oportunidades, o problema pode não estar <b>no que falta em você</b>, mas no que aquela organização está disposta a reconhecer."
+      ]
+    },
+    {
+      "tipo": "cta",
+      "kicker": "Para continuar",
+      "titulo": "Comenta <em><mark>roteiro</mark></em> e eu te envio as perguntas para a conversa com seu gestor.",
+      "apoio": "Envio na DM"
+    }
+  ]
+}
